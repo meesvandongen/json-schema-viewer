@@ -1,0 +1,32 @@
+.stack {
+  font-size: var(--jsv-font-size-description);
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1; /* Span all columns */
+  position: relative;
+  /* Calculate parent nesting offset from parent nesting level, accounting for root level */
+  --parent-nesting-offset: calc(
+    max(0, var(--parent-nesting-level, 0) - var(--root-level, 1)) * var(--jsv-internal-tree-nesting-offset)
+  );
+}
+
+/* Vertical tree line for nested items - positioned at parent's chevron center */
+.stack:not(.root)::before {
+  content: '';
+  position: absolute;
+  /* Position at parent's chevron center: actual indicators width + base padding + parent offset */
+  left: calc(
+    var(--actual-indicators-width, var(--jsv-internal-tree-indicators-width)) + 
+    var(--jsv-internal-tree-chevron-size) + 
+    var(--parent-nesting-offset)
+  );
+  top: 0;
+  bottom: 0;
+  width: var(--jsv-internal-tree-line-width);
+  background: var(--jsv-border);
+  z-index: 0;
+}
+
+.root {
+  /* No border for root level */
+}

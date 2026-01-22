@@ -1,12 +1,16 @@
-import { resolveInlineRef } from '@stoplight/json';
-import { Dictionary } from '@stoplight/types';
+import { resolveInlineRef } from "@stoplight/json";
+import type { Dictionary } from "@stoplight/types";
 
 export type ReferenceInfo = {
   source: string | null;
   pointer: string | null;
 };
 
-export type ReferenceResolver = (ref: ReferenceInfo, propertyPath: string[] | null, currentObject?: object) => any;
+export type ReferenceResolver = (
+  ref: ReferenceInfo,
+  propertyPath: string[] | null,
+  currentObject?: object,
+) => any;
 
 export const defaultResolver =
   (contextObject: object): ReferenceResolver =>
@@ -17,7 +21,7 @@ export const defaultResolver =
       return null;
     }
 
-    if (pointer === '#') {
+    if (pointer === "#") {
       return activeObject;
     }
 

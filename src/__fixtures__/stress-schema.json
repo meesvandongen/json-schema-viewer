@@ -520,7 +520,16 @@
                   "systemOfRecord": {
                     "title": "System Of Record",
                     "type": "string",
-                    "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                    "enum": [
+                      "LOREM",
+                      "HEART",
+                      "IPSUM_CENTER",
+                      "SECURITY",
+                      "BAR",
+                      "FOO",
+                      "BUDDY",
+                      "BONUS"
+                    ]
                   },
                   "partyRoles": {
                     "type": "array",
@@ -946,7 +955,14 @@
                                       "addressPurpose": {
                                         "title": "Address Purpose",
                                         "type": "string",
-                                        "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                        "enum": [
+                                          "BILLING",
+                                          "BUSINESS",
+                                          "HOME",
+                                          "OTHER",
+                                          "MAILING",
+                                          "CONTACT"
+                                        ]
                                       },
                                       "boxNumber": {
                                         "type": "string"
@@ -1109,7 +1125,14 @@
                                       "addressPurpose": {
                                         "title": "Address Purpose",
                                         "type": "string",
-                                        "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                        "enum": [
+                                          "BILLING",
+                                          "BUSINESS",
+                                          "HOME",
+                                          "OTHER",
+                                          "MAILING",
+                                          "CONTACT"
+                                        ]
                                       },
                                       "boxNumber": {
                                         "type": "string"
@@ -1261,7 +1284,12 @@
                               "roleType": {
                                 "type": "string",
                                 "description": "**OTHER_INSURER**: An organisation that is an interested party in the insurance",
-                                "enum": ["SUBCONTRACTOR", "NEW_INSURER", "PREVIOUS_INSURER", "OTHER_INSURER"]
+                                "enum": [
+                                  "SUBCONTRACTOR",
+                                  "NEW_INSURER",
+                                  "PREVIOUS_INSURER",
+                                  "OTHER_INSURER"
+                                ]
                               },
                               "interestedIn": {
                                 "type": "string"
@@ -3265,7 +3293,12 @@
                               },
                               "settlementBasis": {
                                 "type": "string",
-                                "enum": ["AGREED_VALUE", "FIXED_VALUE", "MARKET_VALUE", "SUM_INSURED"],
+                                "enum": [
+                                  "AGREED_VALUE",
+                                  "FIXED_VALUE",
+                                  "MARKET_VALUE",
+                                  "SUM_INSURED"
+                                ],
                                 "description": "Basis on which the confirmation would be settled for this coverageItem. Only required if it differes from the insuredRisks.settlementBasis"
                               },
                               "externalReferences": {
@@ -4000,7 +4033,14 @@
                                 "title": "Premium Frequency",
                                 "type": "string",
                                 "description": "",
-                                "enum": ["ANNUALLY", "QUARTERLY", "MONTHLY", "FORTNIGHTLY", "ONE_OFF", "HALF_YEARLY"]
+                                "enum": [
+                                  "ANNUALLY",
+                                  "QUARTERLY",
+                                  "MONTHLY",
+                                  "FORTNIGHTLY",
+                                  "ONE_OFF",
+                                  "HALF_YEARLY"
+                                ]
                               }
                             }
                           }
@@ -4442,7 +4482,14 @@
                                       "addressPurpose": {
                                         "title": "Address Purpose",
                                         "type": "string",
-                                        "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                        "enum": [
+                                          "BILLING",
+                                          "BUSINESS",
+                                          "HOME",
+                                          "OTHER",
+                                          "MAILING",
+                                          "CONTACT"
+                                        ]
                                       },
                                       "boxNumber": {
                                         "type": "string"
@@ -5388,7 +5435,14 @@
                                         "addressPurpose": {
                                           "title": "Address Purpose",
                                           "type": "string",
-                                          "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                          "enum": [
+                                            "BILLING",
+                                            "BUSINESS",
+                                            "HOME",
+                                            "OTHER",
+                                            "MAILING",
+                                            "CONTACT"
+                                          ]
                                         },
                                         "boxNumber": {
                                           "type": "string"
@@ -5531,7 +5585,13 @@
                                     },
                                     "matchLevel": {
                                       "type": "string",
-                                      "enum": ["EXACT", "PRIMARY", "SUBURB_LEVEL", "STREET_LEVEL", "NONE"]
+                                      "enum": [
+                                        "EXACT",
+                                        "PRIMARY",
+                                        "SUBURB_LEVEL",
+                                        "STREET_LEVEL",
+                                        "NONE"
+                                      ]
                                     },
                                     "geoLocationId": {
                                       "type": "string",
@@ -5725,7 +5785,11 @@
                             },
                             "liabilityType": {
                               "type": "string",
-                              "enum": ["EMPLOYERS_LIABILITY", "GENERAL_LIABILITY", "STATUTORY_LIABILITY"]
+                              "enum": [
+                                "EMPLOYERS_LIABILITY",
+                                "GENERAL_LIABILITY",
+                                "STATUTORY_LIABILITY"
+                              ]
                             },
                             "liabilityCover": {
                               "title": "Liability Cover",
@@ -6296,7 +6360,14 @@
                                         "addressPurpose": {
                                           "title": "Address Purpose",
                                           "type": "string",
-                                          "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                          "enum": [
+                                            "BILLING",
+                                            "BUSINESS",
+                                            "HOME",
+                                            "OTHER",
+                                            "MAILING",
+                                            "CONTACT"
+                                          ]
                                         },
                                         "boxNumber": {
                                           "type": "string"
@@ -6439,7 +6510,13 @@
                                     },
                                     "matchLevel": {
                                       "type": "string",
-                                      "enum": ["EXACT", "PRIMARY", "SUBURB_LEVEL", "STREET_LEVEL", "NONE"]
+                                      "enum": [
+                                        "EXACT",
+                                        "PRIMARY",
+                                        "SUBURB_LEVEL",
+                                        "STREET_LEVEL",
+                                        "NONE"
+                                      ]
                                     },
                                     "geoLocationId": {
                                       "type": "string",
@@ -7224,7 +7301,16 @@
                             "systemOfRecord": {
                               "title": "System Of Record",
                               "type": "string",
-                              "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                              "enum": [
+                                "LOREM",
+                                "HEART",
+                                "IPSUM_CENTER",
+                                "SECURITY",
+                                "BAR",
+                                "FOO",
+                                "BUDDY",
+                                "BONUS"
+                              ]
                             },
                             "partyRole": {
                               "title": "Party Role",
@@ -7798,7 +7884,16 @@
                             "systemOfRecord": {
                               "title": "System Of Record",
                               "type": "string",
-                              "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                              "enum": [
+                                "LOREM",
+                                "HEART",
+                                "IPSUM_CENTER",
+                                "SECURITY",
+                                "BAR",
+                                "FOO",
+                                "BUDDY",
+                                "BONUS"
+                              ]
                             },
                             "partyRole": {
                               "title": "Party Role",
@@ -9305,7 +9400,14 @@
                           "title": "Premium Frequency",
                           "type": "string",
                           "description": "",
-                          "enum": ["ANNUALLY", "QUARTERLY", "MONTHLY", "FORTNIGHTLY", "ONE_OFF", "HALF_YEARLY"]
+                          "enum": [
+                            "ANNUALLY",
+                            "QUARTERLY",
+                            "MONTHLY",
+                            "FORTNIGHTLY",
+                            "ONE_OFF",
+                            "HALF_YEARLY"
+                          ]
                         }
                       }
                     }
@@ -10536,7 +10638,14 @@
                                 "title": "Premium Frequency",
                                 "type": "string",
                                 "description": "",
-                                "enum": ["ANNUALLY", "QUARTERLY", "MONTHLY", "FORTNIGHTLY", "ONE_OFF", "HALF_YEARLY"]
+                                "enum": [
+                                  "ANNUALLY",
+                                  "QUARTERLY",
+                                  "MONTHLY",
+                                  "FORTNIGHTLY",
+                                  "ONE_OFF",
+                                  "HALF_YEARLY"
+                                ]
                               }
                             }
                           }
@@ -10816,7 +10925,16 @@
                       "systemOfRecord": {
                         "title": "System Of Record",
                         "type": "string",
-                        "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                        "enum": [
+                          "LOREM",
+                          "HEART",
+                          "IPSUM_CENTER",
+                          "SECURITY",
+                          "BAR",
+                          "FOO",
+                          "BUDDY",
+                          "BONUS"
+                        ]
                       },
                       "systemOfRecordTransactionDate": {
                         "title": "Date Time Extended",
@@ -11026,7 +11144,16 @@
                           "systemOfRecord": {
                             "title": "System Of Record",
                             "type": "string",
-                            "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                            "enum": [
+                              "LOREM",
+                              "HEART",
+                              "IPSUM_CENTER",
+                              "SECURITY",
+                              "BAR",
+                              "FOO",
+                              "BUDDY",
+                              "BONUS"
+                            ]
                           },
                           "policyId": {
                             "type": "string",
@@ -11571,7 +11698,14 @@
                                             "addressPurpose": {
                                               "title": "Address Purpose",
                                               "type": "string",
-                                              "enum": ["BILLING", "BUSINESS", "HOME", "OTHER", "MAILING", "CONTACT"]
+                                              "enum": [
+                                                "BILLING",
+                                                "BUSINESS",
+                                                "HOME",
+                                                "OTHER",
+                                                "MAILING",
+                                                "CONTACT"
+                                              ]
                                             },
                                             "boxNumber": {
                                               "type": "string"
@@ -12340,7 +12474,12 @@
                               },
                               "settlementBasis": {
                                 "type": "string",
-                                "enum": ["AGREED_VALUE", "FIXED_VALUE", "MARKET_VALUE", "SUM_INSURED"],
+                                "enum": [
+                                  "AGREED_VALUE",
+                                  "FIXED_VALUE",
+                                  "MARKET_VALUE",
+                                  "SUM_INSURED"
+                                ],
                                 "description": "The basis on which the confirmation would be settled on this risk"
                               },
                               "isDisabled": {
@@ -12605,7 +12744,14 @@
             },
             "status": {
               "type": "string",
-              "enum": ["IN_FORCE", "EXPIRED", "CANCELLED", "SUSPENDED", "PENDING", "CANCELLATION_PENDING"],
+              "enum": [
+                "IN_FORCE",
+                "EXPIRED",
+                "CANCELLED",
+                "SUSPENDED",
+                "PENDING",
+                "CANCELLATION_PENDING"
+              ],
               "description": "Current state of the policy i.e. whether active, cancelled, lapsed, at effective date"
             },
             "transactionData": {
@@ -12628,7 +12774,14 @@
                       },
                       "paymentMethod": {
                         "type": "string",
-                        "enum": ["CASH", "CHEQUE", "DIRECT_DEBIT", "DIRECT_CREDIT", "CREDIT_CARD", "BANK_TRANSFER"]
+                        "enum": [
+                          "CASH",
+                          "CHEQUE",
+                          "DIRECT_DEBIT",
+                          "DIRECT_CREDIT",
+                          "CREDIT_CARD",
+                          "BANK_TRANSFER"
+                        ]
                       },
                       "transactionReference": {
                         "type": "string"
@@ -12776,7 +12929,14 @@
                   "title": "Premium Frequency",
                   "type": "string",
                   "description": "",
-                  "enum": ["ANNUALLY", "QUARTERLY", "MONTHLY", "FORTNIGHTLY", "ONE_OFF", "HALF_YEARLY"]
+                  "enum": [
+                    "ANNUALLY",
+                    "QUARTERLY",
+                    "MONTHLY",
+                    "FORTNIGHTLY",
+                    "ONE_OFF",
+                    "HALF_YEARLY"
+                  ]
                 },
                 "paymentDetails": {
                   "type": "array",
@@ -12802,7 +12962,14 @@
                       },
                       "paymentMethod": {
                         "type": "string",
-                        "enum": ["CASH", "CHEQUE", "DIRECT_DEBIT", "DIRECT_CREDIT", "CREDIT_CARD", "BANK_TRANSFER"]
+                        "enum": [
+                          "CASH",
+                          "CHEQUE",
+                          "DIRECT_DEBIT",
+                          "DIRECT_CREDIT",
+                          "CREDIT_CARD",
+                          "BANK_TRANSFER"
+                        ]
                       },
                       "personName": {
                         "type": "string",
@@ -13893,7 +14060,14 @@
                     "title": "Premium Frequency",
                     "type": "string",
                     "description": "",
-                    "enum": ["ANNUALLY", "QUARTERLY", "MONTHLY", "FORTNIGHTLY", "ONE_OFF", "HALF_YEARLY"]
+                    "enum": [
+                      "ANNUALLY",
+                      "QUARTERLY",
+                      "MONTHLY",
+                      "FORTNIGHTLY",
+                      "ONE_OFF",
+                      "HALF_YEARLY"
+                    ]
                   }
                 }
               }
@@ -14090,7 +14264,13 @@
                 "properties": {
                   "eventType": {
                     "type": "string",
-                    "enum": ["DRIVING_OFFENCE", "CRIMINAL_OFFENCE", "LOSS_HISTORY", "INSURANCE_HISTORY", "UNSPECIFIED"]
+                    "enum": [
+                      "DRIVING_OFFENCE",
+                      "CRIMINAL_OFFENCE",
+                      "LOSS_HISTORY",
+                      "INSURANCE_HISTORY",
+                      "UNSPECIFIED"
+                    ]
                   },
                   "disclosureDate": {
                     "title": "Date Only Extended",
@@ -14359,7 +14539,16 @@
                             "systemOfRecord": {
                               "title": "System Of Record",
                               "type": "string",
-                              "enum": ["LOREM", "HEART", "IPSUM_CENTER", "SECURITY", "BAR", "FOO", "BUDDY", "BONUS"]
+                              "enum": [
+                                "LOREM",
+                                "HEART",
+                                "IPSUM_CENTER",
+                                "SECURITY",
+                                "BAR",
+                                "FOO",
+                                "BUDDY",
+                                "BONUS"
+                              ]
                             },
                             "partyRoles": {
                               "type": "array",

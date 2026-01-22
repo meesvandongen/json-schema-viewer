@@ -6,12 +6,7 @@
       "properties": {
         "actionType": {
           "type": "string",
-          "enum": [
-            "Cancel",
-            "Confirm",
-            "Create",
-            "Update"
-          ]
+          "enum": ["Cancel", "Confirm", "Create", "Update"]
         },
         "id": {
           "type": "string",
@@ -33,10 +28,7 @@
           }
         }
       },
-      "required": [
-        "actionType",
-        "items"
-      ]
+      "required": ["actionType", "items"]
     },
     {
       "oneOf": [
@@ -45,34 +37,23 @@
           "properties": {
             "actionType": {
               "type": "string",
-              "enum": [
-                "Cancel",
-                "Confirm",
-                "Update"
-              ]
+              "enum": ["Cancel", "Confirm", "Update"]
             },
             "id": {
               "type": "string"
             }
           },
-          "required": [
-            "actionType",
-            "id"
-          ]
+          "required": ["actionType", "id"]
         },
         {
           "type": "object",
           "properties": {
             "actionType": {
               "type": "string",
-              "enum": [
-                "Create"
-              ]
+              "enum": ["Create"]
             }
           },
-          "required": [
-            "actionType"
-          ]
+          "required": ["actionType"]
         }
       ]
     }

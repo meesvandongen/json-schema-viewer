@@ -2,119 +2,147 @@
 
 exports[`Expanded depth > nested object > static > given initial level set to 0, should render top 2 levels 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="3cbab69efa81f"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="3cbab69efa81f"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d "
+              role="presentation"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
               >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon"
-                  data-icon="chevron-right"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="false"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-bar"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-bar"
-                >
-                  bar
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  object
-                </span>
-              </div>
-            </div>
+                bar
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d "
+              role="presentation"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
               >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon"
-                  data-icon="chevron-right"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="false"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  array[object]
-                </span>
-              </div>
-            </div>
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                array[object]
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -125,313 +153,395 @@ exports[`Expanded depth > nested object > static > given initial level set to 0,
 
 exports[`Expanded depth > nested object > static > given initial level set to 1, should render top 3 levels 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="3cbab69efa81f"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="3cbab69efa81f"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
+          >
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d _expanded_ab251d"
+              role="presentation"
+            >
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="true"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-bar"
+              >
+                bar
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_stack_577e6e  "
+        data-level="1"
+        style="--parent-nesting-offset: 24px;"
+      >
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="true"
+          data-id="12aba6f44026c"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <span
+                aria-hidden="true"
+                class="_caret_ab251d "
+                role="presentation"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                  data-icon="chevron-down"
-                  data-prefix="fas"
+                  class="_chevron_ab251d"
                   focusable="false"
-                  role="img"
-                  viewBox="0 0 448 512"
-                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 12"
                 >
                   <path
-                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                    fill="currentColor"
+                    d="M4 2.5 8 6l-4 3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
                   />
                 </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              </span>
+              <button
+                aria-expanded="false"
+                class="_inline_9d8035"
+                style="cursor: pointer;"
+                type="button"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-bar"
-                >
-                  bar
-                </div>
                 <span
-                  class="sl-truncate sl-text-muted"
+                  class="_name_9d8035"
+                  data-test="property-name-barFoo"
+                >
+                  barFoo
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
                   data-test="property-type"
                 >
                   object
                 </span>
-              </div>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
         <div
-          class="sl-text-sm sl-ml-px sl-border-l"
-          data-level="1"
-        >
-          <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="12aba6f44026c"
-            data-test="schema-row"
-          >
-            <div
-              class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2"
-            >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
-              >
-                <div
-                  class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                  role="button"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon"
-                    data-icon="chevron-right"
-                    data-prefix="fas"
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 320 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barFoo"
-                  >
-                    barFoo
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    object
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="073ba5acf896f"
-            data-test="schema-row"
-          >
-            <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-            >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
-              >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barBar"
-                  >
-                    barBar
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    string
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="07bba5acf9ef7"
-            data-test="schema-row"
-          >
-            <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-            >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
-              >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barBaz"
-                  >
-                    barBaz
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    boolean
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="073ba5acf896f"
+          data-nested="true"
           data-test="schema-row"
+          role="presentation"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                  data-icon="chevron-down"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 448 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
                 <span
-                  class="sl-truncate sl-text-muted"
+                  class="_name_9d8035"
+                  data-test="property-name-barBar"
+                >
+                  barBar
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
                   data-test="property-type"
                 >
-                  array[object]
+                  string
                 </span>
-              </div>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
         <div
-          class="sl-text-sm sl-ml-px sl-border-l"
-          data-level="1"
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="07bba5acf9ef7"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
         >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="ae9fe22da9a31"
-            data-test="schema-row"
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-barBaz"
                 >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-fooBar"
-                  >
-                    fooBar
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    string
-                  </span>
-                </div>
-              </div>
+                  barBaz
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  boolean
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
+        <div
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
+        >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="240fe113d2860"
-            data-test="schema-row"
+            class="_header_9d8035"
+          >
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d _expanded_ab251d"
+              role="presentation"
+            >
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="true"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
+              >
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                array[object]
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_stack_577e6e  "
+        data-level="1"
+        style="--parent-nesting-offset: 24px;"
+      >
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="ae9fe22da9a31"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-fooBar"
                 >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-fooFoo"
-                  >
-                    fooFoo
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    number
-                  </span>
-                </div>
-              </div>
+                  fooBar
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  string
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="240fe113d2860"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
+          >
+            <div
+              class="_header_9d8035"
+            >
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
+              >
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-fooFoo"
+                >
+                  fooFoo
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  number
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
@@ -443,351 +553,444 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
 
 exports[`Expanded depth > nested object > static > given initial level set to 2, should render top 4 levels 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="3cbab69efa81f"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="3cbab69efa81f"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
+          >
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d _expanded_ab251d"
+              role="presentation"
+            >
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="true"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-bar"
+              >
+                bar
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_stack_577e6e  "
+        data-level="1"
+        style="--parent-nesting-offset: 24px;"
+      >
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="true"
+          data-id="12aba6f44026c"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <span
+                aria-hidden="true"
+                class="_caret_ab251d _expanded_ab251d"
+                role="presentation"
               >
                 <svg
                   aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                  data-icon="chevron-down"
-                  data-prefix="fas"
+                  class="_chevron_ab251d"
                   focusable="false"
-                  role="img"
-                  viewBox="0 0 448 512"
-                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 12 12"
                 >
                   <path
-                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                    fill="currentColor"
+                    d="M4 2.5 8 6l-4 3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.6"
                   />
                 </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              </span>
+              <button
+                aria-expanded="true"
+                class="_inline_9d8035"
+                style="cursor: pointer;"
+                type="button"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-bar"
-                >
-                  bar
-                </div>
                 <span
-                  class="sl-truncate sl-text-muted"
+                  class="_name_9d8035"
+                  data-test="property-name-barFoo"
+                >
+                  barFoo
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
                   data-test="property-type"
                 >
                   object
                 </span>
-              </div>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
         <div
-          class="sl-text-sm sl-ml-px sl-border-l"
-          data-level="1"
+          class="_stack_577e6e  "
+          data-level="2"
+          style="--parent-nesting-offset: 48px;"
         >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="12aba6f44026c"
+            aria-label="Schema row"
+            class="_row_9d8035"
+            data-has-chevron="false"
+            data-id="d768172596c01"
+            data-nested="true"
             data-test="schema-row"
+            role="presentation"
           >
             <div
-              class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
+              class="_indicators_9d8035"
             />
             <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2"
+              class="_content_9d8035"
+              style="padding-left: 72px; --nesting-offset: 72px;"
             >
               <div
-                class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+                class="_header_9d8035"
               >
-                <div
-                  class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                  role="button"
+                <button
+                  class="_inline_9d8035"
+                  style="cursor: default;"
+                  type="button"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                    data-icon="chevron-down"
-                    data-prefix="fas"
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 448 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barFoo"
-                  >
-                    barFoo
-                  </div>
                   <span
-                    class="sl-truncate sl-text-muted"
+                    class="_name_9d8035"
+                    data-test="property-name-barFooBar"
+                  >
+                    barFooBar
+                  </span>
+                  <span
+                    class="_types_c734fe _muted_c734fe _text_c734fe"
                     data-test="property-type"
                   >
                     object
                   </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="sl-text-sm sl-ml-7 sl-border-l"
-            data-level="2"
-          >
-            <div
-              class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-              data-id="d768172596c01"
-              data-test="schema-row"
-            >
-              <div
-                class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-              />
-              <div
-                class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-              >
-                <div
-                  class="sl-flex sl-items-center sl-max-w-full"
-                >
-                  <div
-                    class="sl-flex sl-items-baseline sl-text-base"
-                  >
-                    <div
-                      class="sl-font-mono sl-font-semibold sl-mr-2"
-                      data-test="property-name-barFooBar"
-                    >
-                      barFooBar
-                    </div>
-                    <span
-                      class="sl-truncate sl-text-muted"
-                      data-test="property-type"
-                    >
-                      object
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="073ba5acf896f"
-            data-test="schema-row"
-          >
-            <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-            >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
-              >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barBar"
-                  >
-                    barBar
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    string
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="07bba5acf9ef7"
-            data-test="schema-row"
-          >
-            <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-            >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
-              >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
-                >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-barBaz"
-                  >
-                    barBaz
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    boolean
-                  </span>
-                </div>
+                </button>
+                <span
+                  class="_properties_3455dc"
+                />
               </div>
             </div>
           </div>
         </div>
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="073ba5acf896f"
+          data-nested="true"
           data-test="schema-row"
+          role="presentation"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                  data-icon="chevron-down"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 448 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
                 <span
-                  class="sl-truncate sl-text-muted"
+                  class="_name_9d8035"
+                  data-test="property-name-barBar"
+                >
+                  barBar
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
                   data-test="property-type"
                 >
-                  array[object]
+                  string
                 </span>
-              </div>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
         <div
-          class="sl-text-sm sl-ml-px sl-border-l"
-          data-level="1"
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="07bba5acf9ef7"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
         >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="ae9fe22da9a31"
-            data-test="schema-row"
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-barBaz"
                 >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-fooBar"
-                  >
-                    fooBar
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    string
-                  </span>
-                </div>
-              </div>
+                  barBaz
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  boolean
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
+        <div
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
+        >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="240fe113d2860"
-            data-test="schema-row"
+            class="_header_9d8035"
+          >
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d _expanded_ab251d"
+              role="presentation"
+            >
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="true"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
+              >
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                array[object]
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_stack_577e6e  "
+        data-level="1"
+        style="--parent-nesting-offset: 24px;"
+      >
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="ae9fe22da9a31"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
           >
             <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
-            />
-            <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-fooBar"
                 >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-fooFoo"
-                  >
-                    fooFoo
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    number
-                  </span>
-                </div>
-              </div>
+                  fooBar
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  string
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="240fe113d2860"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
+          >
+            <div
+              class="_header_9d8035"
+            >
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
+              >
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-fooFoo"
+                >
+                  fooFoo
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  number
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
@@ -799,248 +1002,302 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
 
 exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf merging enabled, should merge contents of allOf combiners 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_choiceBar_e31247"
     >
-      <div />
-      <div
-        class="sl-stack sl-stack--horizontal sl-stack--3 sl-flex sl-flex-row sl-items-center sl-pb-4"
+      <select
+        aria-label="Pick a type"
       >
-        <div
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Pick a type"
-          class="sl-flex sl-text-base sl-font-mono sl-font-semibold sl-cursor-pointer"
-          id="react-aria-0-2"
+        <option
+          value="0"
         >
           Admin
-          <div
-            class="sl-ml-1"
-          >
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-caret-down sl-icon"
-              data-icon="caret-down"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 320 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="sl-flex sl-items-center sl-text-base sl-text-muted"
+        </option>
+        <option
+          value="1"
         >
-          (any of)
-        </div>
-      </div>
+          Editor
+        </option>
+      </select>
       <div
-        class="sl-text-sm"
-        data-level="0"
+        class="_combiner_e31247"
+      >
+        (any of)
+      </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="4a8da9be0aedc"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="4a8da9be0aedc"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-type"
-                >
-                  type
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-              <div
-                class="sl-flex-1 sl-h-px sl-mx-3"
-              />
               <span
-                class="sl-ml-2 sl-text-warning"
+                class="_name_9d8035"
+                data-test="property-name-type"
+              >
+                type
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <div
+              aria-hidden="true"
+              class="_divider_9d8035"
+            />
+            <span
+              class="_properties_3455dc"
+            >
+              <span
+                class="_pill_3455dc _warning_3455dc"
                 data-test="property-required"
+                title="This property is required"
               >
                 required
               </span>
-            </div>
+            </span>
+          </div>
+          <div
+            class="_validationsGroup_26ded6"
+            data-test="property-validation"
+          >
             <div
-              class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted"
-              data-test="property-validation"
+              class="_validationRow_26ded6"
             >
               <span>
                 Allowed values
                 :
               </span>
-              <div
-                class="sl-flex sl-flex-1 sl-flex-wrap"
-                style="gap: 4px;"
+              <span
+                class="_values_26ded6"
               >
                 <span
-                  class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border"
+                  class="_value_26ded6"
                 >
                   admin
                 </span>
                 <span
-                  class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border"
+                  class="_value_26ded6"
                 >
                   editor
                 </span>
-              </div>
+              </span>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="e2533efaa39da"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="e2533efaa39da"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-enabled"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-enabled"
-                >
-                  enabled
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  boolean
-                </span>
-              </div>
-            </div>
-            <div
-              class="sl-prose sl-markdown-viewer "
-              data-test="property-description"
-              style="font-size: 12px;"
-            >
-              <p>
-                Is this account enabled
-              </p>
-            </div>
+                enabled
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                boolean
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+          <div
+            class="_description_c7fe2c"
+            data-test="property-description"
+          >
+            <p>
+              Is this account enabled
+            </p>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="bd5c934660dce"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="bd5c934660dce"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-root"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-root"
-                >
-                  root
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  boolean
-                </span>
-              </div>
-            </div>
+                root
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                boolean
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="b0aa37b59ceff"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="b0aa37b59ceff"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-group"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-group"
-                >
-                  group
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                group
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="b6d786a9b103c"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="b6d786a9b103c"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-expirationDate"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-expirationDate"
-                >
-                  expirationDate
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                expirationDate
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -1051,76 +1308,72 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
 
 exports[`HTML Output > given array with oneOf containing items, should merge it correctly 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_choiceBar_e31247"
     >
-      <div />
-      <div
-        class="sl-stack sl-stack--horizontal sl-stack--3 sl-flex sl-flex-row sl-items-center sl-pb-4"
+      <select
+        aria-label="Pick a type"
       >
-        <div
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Pick a type"
-          class="sl-flex sl-text-base sl-font-mono sl-font-semibold sl-cursor-pointer"
-          id="react-aria-0-2"
+        <option
+          value="0"
         >
           array[string]
-          <div
-            class="sl-ml-1"
-          >
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-caret-down sl-icon"
-              data-icon="caret-down"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 320 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="sl-flex sl-items-center sl-text-base sl-text-muted"
+        </option>
+        <option
+          value="1"
         >
-          (one of)
-        </div>
-      </div>
+          array[number]
+        </option>
+      </select>
       <div
-        class="sl-flex sl-relative sl-max-w-full sl-py-2"
-        data-id="b55b1e932485c"
-        data-test="schema-row"
+        class="_combiner_e31247"
+      >
+        (one of)
+      </div>
+    </div>
+    <div
+      aria-label="Schema row"
+      class="_row_9d8035"
+      data-has-chevron="false"
+      data-id="b55b1e932485c"
+      data-nested="false"
+      data-test="schema-row"
+      role="presentation"
+    >
+      <div
+        class="_indicators_9d8035"
+      />
+      <div
+        class="_content_9d8035"
+        style="padding-left: 0px; --nesting-offset: 0px;"
       >
         <div
-          class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+          class="_header_9d8035"
         >
-          <div
-            class="sl-flex sl-items-center sl-max-w-full"
+          <button
+            class="_inline_9d8035"
+            style="cursor: default;"
+            type="button"
           >
-            <div
-              class="sl-flex sl-items-baseline sl-text-base"
+            <span
+              class="_types_c734fe _muted_c734fe _text_c734fe"
+              data-test="property-type"
             >
-              <span
-                class="sl-truncate sl-text-muted"
-                data-test="property-type"
-              >
-                array[string]
-              </span>
-            </div>
-          </div>
+              array[string]
+            </span>
+          </button>
+          <span
+            class="_properties_3455dc"
+          />
         </div>
       </div>
     </div>
@@ -1130,73 +1383,83 @@ exports[`HTML Output > given array with oneOf containing items, should merge it 
 
 exports[`HTML Output > given complex type that includes array and complex array subtype, should not ignore subtype 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="231c8499288a6"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="231c8499288a6"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-items"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-items"
+                items
+              </span>
+              <span
+                class="_types_c734fe"
+              >
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
                 >
-                  items
-                </div>
-                <div
-                  class="sl-truncate"
+                  null
+                </span>
+                <span
+                  class="_muted_c734fe"
                 >
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    null
-                  </span>
-                  <span
-                    class="sl-text-muted"
-                  >
-                     or 
-                  </span>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    array[string or number]
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="sl-prose sl-markdown-viewer "
-              data-test="property-description"
-              style="font-size: 12px;"
-            >
-              <p>
-                This description can be long and should truncate once it reaches the end of the row. If it's not truncating then theres and issue that needs to be fixed. Help!
-              </p>
-            </div>
+                   or 
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  array[string or number]
+                </span>
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+          <div
+            class="_description_c7fe2c"
+            data-test="property-description"
+          >
+            <p>
+              This description can be long and should truncate once it reaches the end of the row. If it's not truncating then theres and issue that needs to be fixed. Help!
+            </p>
           </div>
         </div>
       </div>
@@ -1207,108 +1470,134 @@ exports[`HTML Output > given complex type that includes array and complex array 
 
 exports[`HTML Output > given multiple object and string type, should process properties 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      aria-label="Schema row"
+      class="_row_9d8035"
+      data-has-chevron="true"
+      data-id="bf8b96e78f11d"
+      data-nested="false"
+      data-test="schema-row"
+      role="presentation"
     >
-      <div />
       <div
-        class="sl-flex sl-relative sl-max-w-full sl-py-2"
-        data-id="bf8b96e78f11d"
-        data-test="schema-row"
+        class="_indicators_9d8035"
+      />
+      <div
+        class="_content_9d8035"
+        style="padding-left: 0px; --nesting-offset: 0px;"
       >
         <div
-          class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+          class="_header_9d8035"
         >
-          <div
-            class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+          <span
+            aria-hidden="true"
+            class="_caret_ab251d _expanded_ab251d"
+            role="presentation"
           >
-            <div
-              class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-              role="button"
+            <svg
+              aria-hidden="true"
+              class="_chevron_ab251d"
+              focusable="false"
+              viewBox="0 0 12 12"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                data-icon="chevron-down"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 448 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div
-              class="sl-flex sl-items-baseline sl-text-base"
+              <path
+                d="M4 2.5 8 6l-4 3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+          <button
+            aria-expanded="true"
+            class="_inline_9d8035"
+            style="cursor: pointer;"
+            type="button"
+          >
+            <span
+              class="_types_c734fe"
             >
-              <div
-                class="sl-truncate"
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
               >
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-                <span
-                  class="sl-text-muted"
-                >
-                   or 
-                </span>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  object
-                </span>
-              </div>
-            </div>
-          </div>
+                string
+              </span>
+              <span
+                class="_muted_c734fe"
+              >
+                 or 
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </span>
+          </button>
+          <span
+            class="_properties_3455dc"
+          />
         </div>
       </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="2a0059431a56c"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="2a0059431a56c"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-ids"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-ids"
-                >
-                  ids
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  array[integer]
-                </span>
-              </div>
-            </div>
+                ids
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                array[integer]
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -1319,248 +1608,302 @@ exports[`HTML Output > given multiple object and string type, should process pro
 
 exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf merging enabled, should merge contents of allOf combiners 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_choiceBar_e31247"
     >
-      <div />
-      <div
-        class="sl-stack sl-stack--horizontal sl-stack--3 sl-flex sl-flex-row sl-items-center sl-pb-4"
+      <select
+        aria-label="Pick a type"
       >
-        <div
-          aria-expanded="false"
-          aria-haspopup="true"
-          aria-label="Pick a type"
-          class="sl-flex sl-text-base sl-font-mono sl-font-semibold sl-cursor-pointer"
-          id="react-aria-0-2"
+        <option
+          value="0"
         >
           Admin
-          <div
-            class="sl-ml-1"
-          >
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-caret-down sl-icon"
-              data-icon="caret-down"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 320 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-        </div>
-        <div
-          class="sl-flex sl-items-center sl-text-base sl-text-muted"
+        </option>
+        <option
+          value="1"
         >
-          (one of)
-        </div>
-      </div>
+          Editor
+        </option>
+      </select>
       <div
-        class="sl-text-sm"
-        data-level="0"
+        class="_combiner_e31247"
+      >
+        (one of)
+      </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="4a8da9be0aedc"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="4a8da9be0aedc"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-type"
-                >
-                  type
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-              <div
-                class="sl-flex-1 sl-h-px sl-mx-3"
-              />
               <span
-                class="sl-ml-2 sl-text-warning"
+                class="_name_9d8035"
+                data-test="property-name-type"
+              >
+                type
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <div
+              aria-hidden="true"
+              class="_divider_9d8035"
+            />
+            <span
+              class="_properties_3455dc"
+            >
+              <span
+                class="_pill_3455dc _warning_3455dc"
                 data-test="property-required"
+                title="This property is required"
               >
                 required
               </span>
-            </div>
+            </span>
+          </div>
+          <div
+            class="_validationsGroup_26ded6"
+            data-test="property-validation"
+          >
             <div
-              class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted"
-              data-test="property-validation"
+              class="_validationRow_26ded6"
             >
               <span>
                 Allowed values
                 :
               </span>
-              <div
-                class="sl-flex sl-flex-1 sl-flex-wrap"
-                style="gap: 4px;"
+              <span
+                class="_values_26ded6"
               >
                 <span
-                  class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border"
+                  class="_value_26ded6"
                 >
                   admin
                 </span>
                 <span
-                  class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border"
+                  class="_value_26ded6"
                 >
                   editor
                 </span>
-              </div>
+              </span>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="e2533efaa39da"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="e2533efaa39da"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-enabled"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-enabled"
-                >
-                  enabled
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  boolean
-                </span>
-              </div>
-            </div>
-            <div
-              class="sl-prose sl-markdown-viewer "
-              data-test="property-description"
-              style="font-size: 12px;"
-            >
-              <p>
-                Is this account enabled
-              </p>
-            </div>
+                enabled
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                boolean
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
+          </div>
+          <div
+            class="_description_c7fe2c"
+            data-test="property-description"
+          >
+            <p>
+              Is this account enabled
+            </p>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="bd5c934660dce"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="bd5c934660dce"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-root"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-root"
-                >
-                  root
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  boolean
-                </span>
-              </div>
-            </div>
+                root
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                boolean
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="b0aa37b59ceff"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="b0aa37b59ceff"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-group"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-group"
-                >
-                  group
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                group
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="b6d786a9b103c"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="b6d786a9b103c"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-expirationDate"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-expirationDate"
-                >
-                  expirationDate
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                expirationDate
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -1571,108 +1914,134 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
 
 exports[`HTML Output > given read mode, should populate proper nodes 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      aria-label="Schema row"
+      class="_row_9d8035"
+      data-has-chevron="true"
+      data-id="bf8b96e78f11d"
+      data-nested="false"
+      data-test="schema-row"
+      role="presentation"
     >
-      <div />
       <div
-        class="sl-flex sl-relative sl-max-w-full sl-py-2"
-        data-id="bf8b96e78f11d"
-        data-test="schema-row"
+        class="_indicators_9d8035"
+      />
+      <div
+        class="_content_9d8035"
+        style="padding-left: 0px; --nesting-offset: 0px;"
       >
         <div
-          class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+          class="_header_9d8035"
         >
-          <div
-            class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+          <span
+            aria-hidden="true"
+            class="_caret_ab251d _expanded_ab251d"
+            role="presentation"
           >
-            <div
-              class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-              role="button"
+            <svg
+              aria-hidden="true"
+              class="_chevron_ab251d"
+              focusable="false"
+              viewBox="0 0 12 12"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                data-icon="chevron-down"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 448 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div
-              class="sl-flex sl-items-baseline sl-text-base"
+              <path
+                d="M4 2.5 8 6l-4 3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+          <button
+            aria-expanded="true"
+            class="_inline_9d8035"
+            style="cursor: pointer;"
+            type="button"
+          >
+            <span
+              class="_types_c734fe"
             >
-              <div
-                class="sl-truncate"
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
               >
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-                <span
-                  class="sl-text-muted"
-                >
-                   or 
-                </span>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  object
-                </span>
-              </div>
-            </div>
-          </div>
+                string
+              </span>
+              <span
+                class="_muted_c734fe"
+              >
+                 or 
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </span>
+          </button>
+          <span
+            class="_properties_3455dc"
+          />
         </div>
       </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="f19a0161d8b16"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="f19a0161d8b16"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-id"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-id"
-                >
-                  id
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                id
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -1683,156 +2052,201 @@ exports[`HTML Output > given read mode, should populate proper nodes 1`] = `
 
 exports[`HTML Output > given standalone mode, should populate proper nodes 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      aria-label="Schema row"
+      class="_row_9d8035"
+      data-has-chevron="true"
+      data-id="bf8b96e78f11d"
+      data-nested="false"
+      data-test="schema-row"
+      role="presentation"
     >
-      <div />
       <div
-        class="sl-flex sl-relative sl-max-w-full sl-py-2"
-        data-id="bf8b96e78f11d"
-        data-test="schema-row"
+        class="_indicators_9d8035"
+      />
+      <div
+        class="_content_9d8035"
+        style="padding-left: 0px; --nesting-offset: 0px;"
       >
         <div
-          class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+          class="_header_9d8035"
+        >
+          <span
+            aria-hidden="true"
+            class="_caret_ab251d _expanded_ab251d"
+            role="presentation"
+          >
+            <svg
+              aria-hidden="true"
+              class="_chevron_ab251d"
+              focusable="false"
+              viewBox="0 0 12 12"
+            >
+              <path
+                d="M4 2.5 8 6l-4 3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+          <button
+            aria-expanded="true"
+            class="_inline_9d8035"
+            style="cursor: pointer;"
+            type="button"
+          >
+            <span
+              class="_types_c734fe"
+            >
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+              <span
+                class="_muted_c734fe"
+              >
+                 or 
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </span>
+          </button>
+          <span
+            class="_properties_3455dc"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="f19a0161d8b16"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
+        <div
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-              role="button"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                data-icon="chevron-down"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 448 512"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-id"
               >
-                <path
-                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+                id
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
             <div
-              class="sl-flex sl-items-baseline sl-text-base"
+              aria-hidden="true"
+              class="_divider_9d8035"
+            />
+            <span
+              class="_properties_3455dc"
             >
-              <div
-                class="sl-truncate"
+              <span
+                class="_pill_3455dc _muted_3455dc"
+                data-test="property-read-only"
+                title="This property is read-only"
               >
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-                <span
-                  class="sl-text-muted"
-                >
-                   or 
-                </span>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  object
-                </span>
-              </div>
-            </div>
+                read-only
+              </span>
+            </span>
           </div>
         </div>
       </div>
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="78328d924d5b6"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="f19a0161d8b16"
-          data-test="schema-row"
-        >
-          <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-          >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
-            >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-id"
-                >
-                  id
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-              <div
-                class="sl-flex-1 sl-h-px sl-mx-3"
-              />
-              <span
-                class="sl-ml-2 sl-text-muted"
-                data-test="property-read-only"
-              >
-                read-only
-              </span>
-            </div>
-          </div>
-        </div>
+          class="_indicators_9d8035"
+        />
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="78328d924d5b6"
-          data-test="schema-row"
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-description"
-                >
-                  description
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-              <div
-                class="sl-flex-1 sl-h-px sl-mx-3"
-              />
               <span
-                class="sl-ml-2 sl-text-muted"
+                class="_name_9d8035"
+                data-test="property-name-description"
+              >
+                description
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <div
+              aria-hidden="true"
+              class="_divider_9d8035"
+            />
+            <span
+              class="_properties_3455dc"
+            >
+              <span
+                class="_pill_3455dc _muted_3455dc"
                 data-test="property-write-only"
+                title="This property is write-only"
               >
                 write-only
               </span>
-            </div>
+            </span>
           </div>
         </div>
       </div>
@@ -1843,157 +2257,196 @@ exports[`HTML Output > given standalone mode, should populate proper nodes 1`] =
 
 exports[`HTML Output > given visible $ref node, should try to inject the title immediately 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
-          data-test="schema-row"
-        >
-          <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
-          >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
-            >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                  data-icon="chevron-down"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 448 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
-              >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  User
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+          class="_indicators_9d8035"
+        />
         <div
-          class="sl-text-sm sl-ml-px sl-border-l"
-          data-level="1"
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3"
-            data-id="c098fbf9b1d2f"
-            data-test="schema-row"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-w-3 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d _expanded_ab251d"
+              role="presentation"
+            >
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="true"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
+              >
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                User
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
             />
+          </div>
+        </div>
+      </div>
+      <div
+        class="_stack_577e6e  "
+        data-level="1"
+        style="--parent-nesting-offset: 24px;"
+      >
+        <div
+          aria-label="Schema row"
+          class="_row_9d8035"
+          data-has-chevron="false"
+          data-id="c098fbf9b1d2f"
+          data-nested="true"
+          data-test="schema-row"
+          role="presentation"
+        >
+          <div
+            class="_indicators_9d8035"
+          />
+          <div
+            class="_content_9d8035"
+            style="padding-left: 48px; --nesting-offset: 48px;"
+          >
             <div
-              class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+              class="_header_9d8035"
             >
-              <div
-                class="sl-flex sl-items-center sl-max-w-full"
+              <button
+                class="_inline_9d8035"
+                style="cursor: default;"
+                type="button"
               >
-                <div
-                  class="sl-flex sl-items-baseline sl-text-base"
+                <span
+                  class="_name_9d8035"
+                  data-test="property-name-name"
                 >
-                  <div
-                    class="sl-font-mono sl-font-semibold sl-mr-2"
-                    data-test="property-name-name"
-                  >
-                    name
-                  </div>
-                  <span
-                    class="sl-truncate sl-text-muted"
-                    data-test="property-type"
-                  >
-                    string
-                  </span>
-                </div>
-              </div>
+                  name
+                </span>
+                <span
+                  class="_types_c734fe _muted_c734fe _text_c734fe"
+                  data-test="property-type"
+                >
+                  string
+                </span>
+              </button>
+              <span
+                class="_properties_3455dc"
+              />
             </div>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="true"
+        data-id="621e12cb0db5c"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="621e12cb0db5c"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+            <span
+              aria-hidden="true"
+              class="_caret_ab251d "
+              role="presentation"
             >
-              <div
-                class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-                role="button"
+              <svg
+                aria-hidden="true"
+                class="_chevron_ab251d"
+                focusable="false"
+                viewBox="0 0 12 12"
               >
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon"
-                  data-icon="chevron-right"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 320 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+                <path
+                  d="M4 2.5 8 6l-4 3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.6"
+                />
+              </svg>
+            </span>
+            <button
+              aria-expanded="false"
+              class="_inline_9d8035"
+              style="cursor: pointer;"
+              type="button"
+            >
+              <span
+                class="_name_9d8035"
+                data-test="property-name-user"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-user"
-                >
-                  user
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  User
-                </span>
-              </div>
-            </div>
+                user
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                User
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -2004,108 +2457,134 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
 
 exports[`HTML Output > given write mode, should populate proper nodes 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      aria-label="Schema row"
+      class="_row_9d8035"
+      data-has-chevron="true"
+      data-id="bf8b96e78f11d"
+      data-nested="false"
+      data-test="schema-row"
+      role="presentation"
     >
-      <div />
       <div
-        class="sl-flex sl-relative sl-max-w-full sl-py-2"
-        data-id="bf8b96e78f11d"
-        data-test="schema-row"
+        class="_indicators_9d8035"
+      />
+      <div
+        class="_content_9d8035"
+        style="padding-left: 0px; --nesting-offset: 0px;"
       >
         <div
-          class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+          class="_header_9d8035"
         >
-          <div
-            class="sl-flex sl-items-center sl-max-w-full sl-cursor-pointer"
+          <span
+            aria-hidden="true"
+            class="_caret_ab251d _expanded_ab251d"
+            role="presentation"
           >
-            <div
-              class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted"
-              role="button"
+            <svg
+              aria-hidden="true"
+              class="_chevron_ab251d"
+              focusable="false"
+              viewBox="0 0 12 12"
             >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-chevron-down fa-fw fa-sm sl-icon"
-                data-icon="chevron-down"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 448 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <div
-              class="sl-flex sl-items-baseline sl-text-base"
+              <path
+                d="M4 2.5 8 6l-4 3.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.6"
+              />
+            </svg>
+          </span>
+          <button
+            aria-expanded="true"
+            class="_inline_9d8035"
+            style="cursor: pointer;"
+            type="button"
+          >
+            <span
+              class="_types_c734fe"
             >
-              <div
-                class="sl-truncate"
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
               >
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-                <span
-                  class="sl-text-muted"
-                >
-                   or 
-                </span>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  object
-                </span>
-              </div>
-            </div>
-          </div>
+                string
+              </span>
+              <span
+                class="_muted_c734fe"
+              >
+                 or 
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                object
+              </span>
+            </span>
+          </button>
+          <span
+            class="_properties_3455dc"
+          />
         </div>
       </div>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="78328d924d5b6"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="78328d924d5b6"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-description"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-description"
-                >
-                  description
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                description
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -2116,79 +2595,103 @@ exports[`HTML Output > given write mode, should populate proper nodes 1`] = `
 
 exports[`HTML Output > top level descriptions > should not render top-level description when skipTopLevelDescription=true 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
     >
-      <div />
       <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="3d3ab69efb5e7"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="3d3ab69efb5e7"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-baz"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-baz"
-                >
-                  baz
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                baz
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>
@@ -2199,88 +2702,111 @@ exports[`HTML Output > top level descriptions > should not render top-level desc
 
 exports[`HTML Output > top level descriptions > should render top-level description on allOf 1`] = `
 <div
-  class=""
-  id="mosaic-provider-react-aria-0-1"
+  aria-label="JSON schema viewer"
+  class="_viewer_e7b391 json-schema-viewer"
+  role="region"
+  tabindex="0"
 >
   <div
-    class=""
-    data-overlay-container="true"
+    class="_container_e31247"
   >
+    <div />
     <div
-      class="JsonSchemaViewer"
+      class="_description_c7fe2c"
+      data-test="property-description"
     >
-      <div />
+      <p>
+        This is a description that should be rendered
+      </p>
+    </div>
+    <div
+      class="_stack_577e6e _root_577e6e "
+      data-level="0"
+      style="--parent-nesting-offset: 0px;"
+    >
       <div
-        class="sl-prose sl-markdown-viewer "
-        data-test="property-description"
-        style="font-size: 12px;"
-      >
-        <p>
-          This is a description that should be rendered
-        </p>
-      </div>
-      <div
-        class="sl-text-sm"
-        data-level="0"
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="862ab7c3a6663"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
       >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="862ab7c3a6663"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-foo"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-foo"
-                >
-                  foo
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                foo
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
+      </div>
+      <div
+        aria-label="Schema row"
+        class="_row_9d8035"
+        data-has-chevron="false"
+        data-id="3d3ab69efb5e7"
+        data-nested="false"
+        data-test="schema-row"
+        role="presentation"
+      >
         <div
-          class="sl-flex sl-relative sl-max-w-full sl-py-2"
-          data-id="3d3ab69efb5e7"
-          data-test="schema-row"
+          class="_indicators_9d8035"
+        />
+        <div
+          class="_content_9d8035"
+          style="padding-left: 0px; --nesting-offset: 0px;"
         >
           <div
-            class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full"
+            class="_header_9d8035"
           >
-            <div
-              class="sl-flex sl-items-center sl-max-w-full"
+            <button
+              class="_inline_9d8035"
+              style="cursor: default;"
+              type="button"
             >
-              <div
-                class="sl-flex sl-items-baseline sl-text-base"
+              <span
+                class="_name_9d8035"
+                data-test="property-name-baz"
               >
-                <div
-                  class="sl-font-mono sl-font-semibold sl-mr-2"
-                  data-test="property-name-baz"
-                >
-                  baz
-                </div>
-                <span
-                  class="sl-truncate sl-text-muted"
-                  data-test="property-type"
-                >
-                  string
-                </span>
-              </div>
-            </div>
+                baz
+              </span>
+              <span
+                class="_types_c734fe _muted_c734fe _text_c734fe"
+                data-test="property-type"
+              >
+                string
+              </span>
+            </button>
+            <span
+              class="_properties_3455dc"
+            />
           </div>
         </div>
       </div>

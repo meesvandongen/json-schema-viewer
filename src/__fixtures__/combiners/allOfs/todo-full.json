@@ -11,19 +11,11 @@
             "type": "string"
           },
           "completed": {
-            "type": [
-              "boolean",
-              "null"
-            ]
+            "type": ["boolean", "null"]
           }
         },
-        "required": [
-          "name",
-          "completed"
-        ],
-        "x-tags": [
-          "Todos"
-        ]
+        "required": ["name", "completed"],
+        "x-tags": ["Todos"]
       },
       {
         "type": "object",
@@ -34,10 +26,7 @@
             "maximum": 1000000
           },
           "completed_at": {
-            "type": [
-              "string",
-              "null"
-            ],
+            "type": ["string", "null"],
             "format": "date-time"
           },
           "created_at": {
@@ -62,23 +51,13 @@
                 "maximum": 150
               }
             },
-            "required": [
-              "name",
-              "age"
-            ],
-            "x-tags": [
-              "Todos"
-            ]
+            "required": ["name", "age"],
+            "x-tags": ["Todos"]
           }
         },
-        "required": [
-          "id",
-          "user"
-        ]
+        "required": ["id", "user"]
       }
     ],
-    "x-tags": [
-      "Todos"
-    ]
+    "x-tags": ["Todos"]
   }
 }

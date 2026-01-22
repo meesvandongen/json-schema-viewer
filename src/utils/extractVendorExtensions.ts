@@ -1,4 +1,4 @@
-import { SchemaFragment } from '@stoplight/json-schema-tree';
+import type { SchemaFragment } from "@stoplight/json-schema-tree";
 
 export type VendorExtensionsList = {
   [keyof: string]: unknown;
@@ -11,12 +11,14 @@ export type VendorExtensionsResult = [number, VendorExtensionsList];
  * @param fragment The fragment to extract the vendor extensions from
  * @returns VendorExtensionsResult
  */
-export function extractVendorExtensions(fragment: SchemaFragment | boolean): VendorExtensionsResult {
-  if (typeof fragment === 'boolean') {
+export function extractVendorExtensions(
+  fragment: SchemaFragment | boolean,
+): VendorExtensionsResult {
+  if (typeof fragment === "boolean") {
     return [0, {}];
   }
 
-  const extensionKeys = Object.entries(fragment).filter(([key]) => key.startsWith('x-'));
+  const extensionKeys = Object.entries(fragment).filter(([key]) => key.startsWith("x-"));
   let vendorExtensions: VendorExtensionsList = {};
 
   for (const [key, value] of extensionKeys) {

@@ -26,10 +26,7 @@
             "description": "The status that addresses if a specific ticket option is active or not. The status active is used before ticketing or before exchange confirmation. After ticketing, the status changes in completed. This allows to store ticketing options already used at ticketing time and to clean up all non selected options after ticketing or exchanged confirmation.",
             "type": "string",
             "default": "ACTIVE",
-            "enum": [
-              "COMPLETED",
-              "ACTIVE"
-            ]
+            "enum": ["COMPLETED", "ACTIVE"]
           },
           "orderItemBreakdown": {
             "description": "Structure that contains ticketing options per order item.",
@@ -51,12 +48,7 @@
                         "description": "Ticketing option short-description.",
                         "type": "string",
                         "readOnly": true,
-                        "enum": [
-                          "HOMEPRINT",
-                          "TICKETLESS",
-                          "PRINT_AT_KIOSK",
-                          "SECURE_PAPER"
-                        ]
+                        "enum": ["HOMEPRINT", "TICKETLESS", "PRINT_AT_KIOSK", "SECURE_PAPER"]
                       },
                       "selected": {
                         "description": "Flag to specify which ticketing option is selected. Only one option is allowed to be selected.",
@@ -75,24 +67,14 @@
                             "type": "array",
                             "items": {
                               "type": "string",
-                              "enum": [
-                                "POSTAL",
-                                "PICK_UP_STATION",
-                                "E-MAIL",
-                                "LOYALTY_CARD"
-                              ]
+                              "enum": ["POSTAL", "PICK_UP_STATION", "E-MAIL", "LOYALTY_CARD"]
                             }
                           },
                           "ticketRecipients": {
                             "type": "array",
                             "items": {
                               "type": "string",
-                              "enum": [
-                                "BOOKER",
-                                "CUSTOMER",
-                                "PASSENGER",
-                                "THIRD_PARTY"
-                              ]
+                              "enum": ["BOOKER", "CUSTOMER", "PASSENGER", "THIRD_PARTY"]
                             }
                           },
                           "ccEmail": {

@@ -1,14 +1,17 @@
 import {
   isRegularNode,
   isRootNode,
-  SchemaNode,
+  type SchemaNode,
   SchemaTree as JsonSchemaTree,
-  SchemaTreeOptions,
-} from '@stoplight/json-schema-tree';
-import type { JSONSchema4, JSONSchema7 } from 'json-schema';
-import { isEqual } from 'lodash';
+  type SchemaTreeOptions,
+} from "@stoplight/json-schema-tree";
+import type { JSONSchema4, JSONSchema7 } from "json-schema";
+import { isEqual } from "lodash";
 
-export function buildTree(schema: JSONSchema4 | JSONSchema7, options: Partial<SchemaTreeOptions> = {}) {
+export function buildTree(
+  schema: JSONSchema4 | JSONSchema7,
+  options: Partial<SchemaTreeOptions> = {},
+) {
   const jsonSchemaTree = new JsonSchemaTree(schema, {
     mergeAllOf: true,
     ...options,
@@ -17,7 +20,10 @@ export function buildTree(schema: JSONSchema4 | JSONSchema7, options: Partial<Sc
   return jsonSchemaTree.root;
 }
 
-export const findNodeWithPath = (node: SchemaNode, path: readonly string[]): SchemaNode | undefined => {
+export const findNodeWithPath = (
+  node: SchemaNode,
+  path: readonly string[],
+): SchemaNode | undefined => {
   if (node.path.length > path.length) {
     // too much circular recursion
     return undefined;

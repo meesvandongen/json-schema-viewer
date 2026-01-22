@@ -1,10 +1,10 @@
-import { extractPointerFromRef, pointerToPath } from '@stoplight/json';
-import { isReferenceNode, isRegularNode, SchemaNode } from '@stoplight/json-schema-tree';
-import last from 'lodash/last.js';
-import * as React from 'react';
+import { extractPointerFromRef, pointerToPath } from "@stoplight/json";
+import { isReferenceNode, isRegularNode, type SchemaNode } from "@stoplight/json-schema-tree";
+import last from "lodash/last.js";
+import * as React from "react";
 
-import { isComplexArray, isNonEmptyParentNode } from '../../tree';
-import { printName } from '../../utils';
+import { isComplexArray, isNonEmptyParentNode } from "../../tree";
+import { printName } from "../../utils";
 
 /** one option among several mutually exclusive sub-schemas */
 export type Choice = {
@@ -13,7 +13,7 @@ export type Choice = {
 };
 
 function calculateChoiceTitle(node: SchemaNode, isPlural: boolean): string {
-  const primitiveSuffix = isPlural ? 's' : '';
+  const primitiveSuffix = isPlural ? "s" : "";
   if (isRegularNode(node)) {
     const realName = printName(node, { shouldUseRefNameFallback: true });
     if (realName) {
@@ -21,20 +21,21 @@ function calculateChoiceTitle(node: SchemaNode, isPlural: boolean): string {
     }
     return node.primaryType !== null
       ? node.primaryType + primitiveSuffix
-      : String(node.originalFragment.title || 'any');
+      : String(node.originalFragment.title || "any");
   }
   if (isReferenceNode(node)) {
     if (node.value) {
       const value = extractPointerFromRef(node.value);
       const lastPiece = !node.error && value ? last(pointerToPath(value)) : null;
-      if (typeof lastPiece === 'string') {
-        return lastPiece.split('.')[0];
+      if (typeof lastPiece === "string") {
+        const firstPart = lastPiece.split(".")[0];
+        return firstPart ?? "any";
       }
     }
-    return '$ref' + primitiveSuffix;
+    return "$ref" + primitiveSuffix;
   }
 
-  return 'any';
+  return "any";
 }
 
 function makeChoice(node: SchemaNode): Choice {
@@ -46,7 +47,8 @@ function makeChoice(node: SchemaNode): Choice {
 
 function makeArrayChoice(node: SchemaNode, combiner?: string): Choice {
   const itemTitle = calculateChoiceTitle(node, true);
-  const title = itemTitle !== 'any' ? `array ${combiner ? `(${combiner})` : null} [${itemTitle}]` : 'array';
+  const title =
+    itemTitle !== "any" ? `array ${combiner ? `(${combiner})` : null} [${itemTitle}]` : "array";
   return {
     type: node,
     title,
@@ -68,7 +70,7 @@ export const useChoices = (schemaNode: SchemaNode) => {
       isNonEmptyParentNode(schemaNode.children[0]) &&
       shouldShowChildSelector(schemaNode.children[0])
     ) {
-      return schemaNode.children[0].children.map(child =>
+      return schemaNode.children[0].children.map((child) =>
         makeArrayChoice(child, schemaNode.children[0].combiners?.[0]),
       );
     }
@@ -89,10 +91,11 @@ export const useChoices = (schemaNode: SchemaNode) => {
     setSelectedChoice(defaultChoice);
   }, [defaultChoice]);
 
-  const actualSelectedChoice = selectedChoice && choices.includes(selectedChoice) ? selectedChoice : defaultChoice;
+  const actualSelectedChoice =
+    selectedChoice && choices.includes(selectedChoice) ? selectedChoice : defaultChoice;
 
   return { selectedChoice: actualSelectedChoice, setSelectedChoice, choices };
 };
 
 const shouldShowChildSelector = (schemaNode: SchemaNode) =>
-  isNonEmptyParentNode(schemaNode) && ['anyOf', 'oneOf'].includes(schemaNode.combiners?.[0] ?? '');
+  isNonEmptyParentNode(schemaNode) && ["anyOf", "oneOf"].includes(schemaNode.combiners?.[0] ?? "");

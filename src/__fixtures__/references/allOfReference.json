@@ -4,7 +4,9 @@
     {
       "type": "object",
       "properties": {
-        "AAAAA": { "allOf": [{ "description": "AAAAA", "type": "string" }, { "examples": ["AAAAA"] }] },
+        "AAAAA": {
+          "allOf": [{ "description": "AAAAA", "type": "string" }, { "examples": ["AAAAA"] }]
+        },
         "BBBBB": {
           "allOf": [
             {

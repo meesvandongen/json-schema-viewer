@@ -1,0 +1,19 @@
+.properties {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jsv-gap-sm);
+  font-size: var(--jsv-font-size-property);
+  flex-wrap: wrap;
+}
+
+.pill {
+  font-weight: 500;
+}
+
+.warning {
+  color: var(--jsv-warning);
+}
+
+.muted {
+  color: var(--jsv-muted);
+}

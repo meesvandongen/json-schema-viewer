@@ -1,0 +1,35 @@
+.container {
+  display: contents; /* Makes children participate in parent grid */
+}
+
+.choiceBar {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jsv-gap-sm);
+  padding: var(--jsv-gap-sm) var(--jsv-gap-md);
+  background: var(--jsv-surface-raised);
+  border: 1px solid var(--jsv-border);
+  border-radius: var(--jsv-radius-md);
+}
+
+.choiceTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jsv-gap-xs);
+  font-family: var(--jsv-font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--jsv-text);
+}
+
+.combiner {
+  color: var(--jsv-muted);
+  font-size: var(--jsv-font-size-description);
+}
+
+.arrayLabel {
+  font-family: var(--jsv-font-mono);
+  font-weight: 600;
+  font-size: var(--jsv-font-size-title);
+  padding-bottom: var(--jsv-gap-sm);
+}

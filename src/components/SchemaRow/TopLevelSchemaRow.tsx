@@ -1,36 +1,38 @@
-import { isPlainObject } from '@stoplight/json';
-import { isRegularNode, RegularNode } from '@stoplight/json-schema-tree';
-import { Box, Flex, HStack, Icon, Menu, Pressable } from '@stoplight/mosaic';
-import { useUpdateAtom } from 'jotai/utils';
-import { isEmpty } from 'lodash';
-import * as React from 'react';
+import { isPlainObject } from "@stoplight/json";
+import { isRegularNode, type RegularNode } from "@stoplight/json-schema-tree";
+import { useSetAtom } from "jotai";
+import { isEmpty } from "lodash";
+import * as React from "react";
 
-import { COMBINER_NAME_MAP } from '../../consts';
-import { useJSVOptionsContext } from '../../contexts';
-import { useIsOnScreen } from '../../hooks/useIsOnScreen';
-import { isComplexArray, isDictionaryNode, visibleChildren } from '../../tree';
-import { extractVendorExtensions } from '../../utils/extractVendorExtensions';
-import { showPathCrumbsAtom } from '../PathCrumbs/state';
-import { Description, getValidationsFromSchema, Validations } from '../shared';
-import { ChildStack } from '../shared/ChildStack';
-import { Error } from '../shared/Error';
-import { SchemaRow, SchemaRowProps } from './SchemaRow';
-import { useChoices } from './useChoices';
+import { COMBINER_NAME_MAP } from "../../consts";
+import { useJSVOptionsContext } from "../../contexts";
+import { useIsOnScreen } from "../../hooks/useIsOnScreen";
+import { isComplexArray, isDictionaryNode, visibleChildren } from "../../tree";
+import { extractVendorExtensions } from "../../utils/extractVendorExtensions";
+import { showPathCrumbsAtom } from "../PathCrumbs/state";
+import { Description, getValidationsFromSchema, Validations } from "../shared";
+import { ChildStack } from "../shared/ChildStack";
+import { SchemaRow, type SchemaRowProps } from "./SchemaRow";
+import { useChoices } from "./useChoices";
+import topStyles from "../shared/TopLevelSchemaRow.module.css";
 
 export const TopLevelSchemaRow = ({
   schemaNode,
   skipDescription,
-}: Pick<SchemaRowProps, 'schemaNode'> & { skipDescription?: boolean }) => {
+}: Pick<SchemaRowProps, "schemaNode"> & { skipDescription?: boolean }) => {
   const { renderExtensionAddon } = useJSVOptionsContext();
 
   const { selectedChoice, setSelectedChoice, choices } = useChoices(schemaNode);
-  const childNodes = React.useMemo(() => visibleChildren(selectedChoice.type), [selectedChoice.type]);
+  const childNodes = React.useMemo(
+    () => visibleChildren(selectedChoice?.type ?? schemaNode),
+    [selectedChoice, schemaNode],
+  );
   const nestingLevel = 0;
 
   const nodeId = (() => {
-    if (isPlainObject(schemaNode.fragment) && isPlainObject(schemaNode.fragment['x-stoplight'])) {
-      const id = schemaNode.fragment['x-stoplight'].id;
-      return typeof id === 'string' ? id : undefined;
+    if (isPlainObject(schemaNode.fragment) && isPlainObject(schemaNode.fragment["x-stoplight"])) {
+      const id = schemaNode.fragment["x-stoplight"].id;
+      return typeof id === "string" ? id : undefined;
     }
     return undefined;
   })();
@@ -43,7 +45,7 @@ export const TopLevelSchemaRow = ({
   // regular objects are flattened at the top level
   if (isRegularNode(schemaNode) && isPureObjectNode(schemaNode)) {
     return (
-      <>
+      <div className={topStyles.container}>
         <ScrollCheck />
         {!skipDescription ? <Description value={schemaNode.annotations.description} /> : null}
         {hasVendorProperties && renderExtensionAddon
@@ -55,48 +57,44 @@ export const TopLevelSchemaRow = ({
           currentNestingLevel={nestingLevel}
           parentNodeId={nodeId}
         />
-        <Error schemaNode={schemaNode} />
-      </>
+      </div>
     );
   }
 
   if (isRegularNode(schemaNode) && choices.length > 1) {
-    const combiner = isRegularNode(schemaNode) && schemaNode.combiners?.length ? schemaNode.combiners[0] : null;
+    const combiner =
+      isRegularNode(schemaNode) && schemaNode.combiners?.length ? schemaNode.combiners[0] : null;
 
     return (
-      <>
+      <div className={topStyles.container}>
         <ScrollCheck />
         {schemaNode.annotations.description !== schemaNode.parent?.fragment.description && (
           <Description value={schemaNode.annotations.description} />
         )}
-        <HStack spacing={3} pb={4}>
-          <Menu
-            aria-label="Pick a type"
-            closeOnPress
-            placement="bottom left"
-            items={choices.map((choice, index) => ({
-              id: index,
-              title: choice.title,
-              onPress: () => setSelectedChoice(choice),
-            }))}
-            renderTrigger={props => (
-              <Pressable {...props}>
-                <Flex fontFamily="mono" fontWeight="semibold" cursor="pointer" fontSize="base">
-                  {selectedChoice.title}
-                  <Box ml={1}>
-                    <Icon icon={['fas', 'caret-down']} />
-                  </Box>
-                </Flex>
-              </Pressable>
-            )}
-          />
+        {selectedChoice && (
+          <div className={topStyles.choiceBar}>
+            <select
+              aria-label="Pick a type"
+              value={String(choices.indexOf(selectedChoice))}
+              onChange={(event) => {
+                const choice = choices[Number(event.target.value)];
+                if (choice) {
+                  setSelectedChoice(choice);
+                }
+              }}
+            >
+              {choices.map((choice, index) => (
+                <option key={`${choice.title}-${index}`} value={String(index)}>
+                  {choice.title}
+                </option>
+              ))}
+            </select>
 
-          {combiner !== null ? (
-            <Flex alignItems="center" color="muted" fontSize="base">
-              {`(${COMBINER_NAME_MAP[combiner]})`}
-            </Flex>
-          ) : null}
-        </HStack>
+            {combiner && combiner in COMBINER_NAME_MAP ? (
+              <div className={topStyles.combiner}>{`(${COMBINER_NAME_MAP[combiner]})`}</div>
+            ) : null}
+          </div>
+        )}
         {childNodes.length > 0 ? (
           <ChildStack
             schemaNode={schemaNode}
@@ -104,29 +102,23 @@ export const TopLevelSchemaRow = ({
             currentNestingLevel={nestingLevel}
             parentNodeId={nodeId}
           />
-        ) : combiner ? (
+        ) : combiner && selectedChoice ? (
           <SchemaRow schemaNode={selectedChoice.type} nestingLevel={nestingLevel} />
         ) : null}
-      </>
+      </div>
     );
   }
 
-  if (isComplexArray(schemaNode) && isPureObjectNode(schemaNode.children[0])) {
+  if (isComplexArray(schemaNode) && schemaNode.children[0] && isPureObjectNode(schemaNode.children[0])) {
     const validations = isRegularNode(schemaNode) ? getValidationsFromSchema(schemaNode) : {};
     return (
-      <>
+      <div className={topStyles.container}>
         <ScrollCheck />
         <Description value={schemaNode.annotations.description} />
 
-        <Box fontFamily="mono" fontWeight="semibold" fontSize="base" pb={4}>
-          array of:
-        </Box>
+        <div className={topStyles.arrayLabel}>array of:</div>
 
-        {!isEmpty(validations) && (
-          <Box fontSize="sm" mb={1} mt={-2}>
-            <Validations validations={validations} />
-          </Box>
-        )}
+        {!isEmpty(validations) && <Validations validations={validations} />}
 
         {childNodes.length > 0 ? (
           <ChildStack
@@ -136,15 +128,15 @@ export const TopLevelSchemaRow = ({
             parentNodeId={nodeId}
           />
         ) : null}
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <div className={topStyles.container}>
       <ScrollCheck />
       <SchemaRow schemaNode={schemaNode} nestingLevel={nestingLevel} />
-    </>
+    </div>
   );
 };
 
@@ -152,7 +144,7 @@ function ScrollCheck() {
   const elementRef = React.useRef<HTMLDivElement>(null);
 
   const isOnScreen = useIsOnScreen(elementRef);
-  const setShowPathCrumbs = useUpdateAtom(showPathCrumbsAtom);
+  const setShowPathCrumbs = useSetAtom(showPathCrumbsAtom);
   React.useEffect(() => {
     setShowPathCrumbs(!isOnScreen);
   }, [isOnScreen, setShowPathCrumbs]);
@@ -161,5 +153,9 @@ function ScrollCheck() {
 }
 
 function isPureObjectNode(schemaNode: RegularNode) {
-  return schemaNode.primaryType === 'object' && schemaNode.types?.length === 1 && !isDictionaryNode(schemaNode);
+  return (
+    schemaNode.primaryType === "object" &&
+    schemaNode.types?.length === 1 &&
+    !isDictionaryNode(schemaNode)
+  );
 }

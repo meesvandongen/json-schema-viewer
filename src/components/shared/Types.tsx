@@ -2,49 +2,48 @@ import {
   isBooleanishNode,
   isReferenceNode,
   isRegularNode,
-  RegularNode,
-  SchemaCombinerName,
-  SchemaNode,
+  type RegularNode,
+  type SchemaCombinerName,
+  type SchemaNode,
   SchemaNodeKind,
-} from '@stoplight/json-schema-tree';
-import { Box } from '@stoplight/mosaic';
-import * as React from 'react';
+} from "@stoplight/json-schema-tree";
+import * as React from "react";
 
-import { printName } from '../../utils';
-import { getApplicableFormats } from '../../utils/getApplicableFormats';
+import { printName } from "../../utils";
+import { getApplicableFormats } from "../../utils/getApplicableFormats";
+import styles from "./Types.module.css";
 
-function shouldRenderName(type: SchemaNodeKind | SchemaCombinerName | '$ref'): boolean {
-  return type === SchemaNodeKind.Array || type === SchemaNodeKind.Object || type === '$ref';
+function shouldRenderName(type: SchemaNodeKind | SchemaCombinerName | "$ref"): boolean {
+  return type === SchemaNodeKind.Array || type === SchemaNodeKind.Object || type === "$ref";
 }
 
 function getTypes(schemaNode: RegularNode): Array<SchemaNodeKind | SchemaCombinerName> {
-  return [schemaNode.types, schemaNode.combiners].reduce<Array<SchemaNodeKind | SchemaCombinerName>>(
-    (values, value) => {
-      if (value === null) {
-        return values;
-      }
-
-      values.push(...value);
+  return [schemaNode.types, schemaNode.combiners].reduce<
+    Array<SchemaNodeKind | SchemaCombinerName>
+  >((values, value) => {
+    if (value === null) {
       return values;
-    },
-    [],
-  );
+    }
+
+    values.push(...value);
+    return values;
+  }, []);
 }
 
 export const Types: React.FunctionComponent<{ schemaNode: SchemaNode }> = ({ schemaNode }) => {
   if (isReferenceNode(schemaNode)) {
     return (
-      <Box as="span" textOverflow="truncate" data-test="property-type-ref">
-        {schemaNode.value ?? '$ref'}
-      </Box>
+      <span className={`${styles.types} ${styles.text}`} data-test="property-type-ref">
+        {schemaNode.value ?? "$ref"}
+      </span>
     );
   }
 
   if (isBooleanishNode(schemaNode)) {
     return (
-      <Box as="span" textOverflow="truncate" color="muted" data-test="property-type">
-        {schemaNode.fragment ? 'any' : 'never'}
-      </Box>
+      <span className={`${styles.types} ${styles.muted} ${styles.text}`} data-test="property-type">
+        {schemaNode.fragment ? "any" : "never"}
+      </span>
     );
   }
 
@@ -57,35 +56,34 @@ export const Types: React.FunctionComponent<{ schemaNode: SchemaNode }> = ({ sch
 
   if (types.length === 0) {
     return (
-      <Box as="span" textOverflow="truncate" color="muted" data-test="property-type">
-        {formats === null ? 'any' : `<${formats[1]}>`}
-      </Box>
+      <span className={`${styles.types} ${styles.muted} ${styles.text}`} data-test="property-type">
+        {formats === null ? "any" : `<${formats[1]}>`}
+      </span>
     );
   }
 
-  const rendered = types.map((type, i, { length }) => {
-    let printedName;
+  const rendered = types.map((type, i, { length }): React.ReactNode => {
+    let printedName: string | undefined;
     if (shouldRenderName(type)) {
       printedName = printName(schemaNode);
     }
 
-    printedName ??= type + (formats === null || formats[0] !== type ? '' : `<${formats[1]}>`);
+    printedName ??= type + (formats === null || formats[0] !== type ? "" : `<${formats[1]}>`);
 
     return (
       <React.Fragment key={type}>
-        <Box as="span" textOverflow="truncate" color="muted" data-test="property-type">
+        <span
+          className={`${styles.types} ${styles.muted} ${styles.text}`}
+          data-test="property-type"
+        >
           {printedName}
-        </Box>
+        </span>
 
-        {i < length - 1 && (
-          <Box as="span" key={`${i}-sep`} color="muted">
-            {' or '}
-          </Box>
-        )}
+        {i < length - 1 && <span className={styles.muted}>{" or "}</span>}
       </React.Fragment>
     );
   });
 
-  return rendered.length > 1 ? <Box textOverflow="truncate">{rendered}</Box> : <>{rendered}</>;
+  return rendered.length > 1 ? <span className={styles.types}>{rendered}</span> : <>{rendered}</>;
 };
-Types.displayName = 'JsonSchemaViewer.Types';
+Types.displayName = "JsonSchemaViewer.Types";

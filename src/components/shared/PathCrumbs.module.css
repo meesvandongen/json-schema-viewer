@@ -1,0 +1,24 @@
+.crumbs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--jsv-gap-xs) var(--jsv-gap-sm);
+  background: var(--jsv-surface);
+  border-bottom: 1px solid var(--jsv-border);
+  font-family: var(--jsv-font-mono);
+  font-size: var(--jsv-font-size-breadcrumb);
+  line-height: 1.4;
+  color: var(--jsv-muted);
+}
+
+.divider {
+  color: var(--jsv-muted);
+}
+
+.active {
+  color: var(--jsv-text);
+  font-weight: 600;
+}

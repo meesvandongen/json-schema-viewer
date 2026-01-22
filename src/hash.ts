@@ -1,7 +1,6 @@
-import { isPlainObject } from '@stoplight/json';
-import type { SchemaNode } from '@stoplight/json-schema-tree';
-// @ts-expect-error: no types
-import * as fnv from 'fnv-plus';
+import { isPlainObject } from "@stoplight/json";
+import type { SchemaNode } from "@stoplight/json-schema-tree";
+import * as fnv from "fnv-plus";
 
 // for easier debugging the values going into hash
 let SKIP_HASHING = false;
@@ -19,22 +18,22 @@ export const hash = (value: string, skipHashing: boolean = SKIP_HASHING): string
 export const getNodeId = (node: SchemaNode, parentId?: string): string => {
   const fragment = node.fragment;
 
-  if (isPlainObject(fragment) && isPlainObject(fragment['x-stoplight'])) {
-    const nodeId = fragment['x-stoplight'].id;
-    if (typeof nodeId === 'string') return nodeId;
+  if (isPlainObject(fragment) && isPlainObject(fragment["x-stoplight"])) {
+    const nodeId = fragment["x-stoplight"].id;
+    if (typeof nodeId === "string") return nodeId;
   }
 
   const key = node.path[node.path.length - 1];
 
-  return hash(['schema_property', parentId, String(key)].join('-'));
+  return hash(["schema_property", parentId, String(key)].join("-"));
 };
 
 export const getOriginalNodeId = (node: SchemaNode, parentId?: string): string => {
-  // @ts-expect-error originalFragment does exist...
-  const nodeId = node.originalFragment?.['x-stoplight']?.id;
+  const nodeId = (node as { originalFragment?: { "x-stoplight"?: { id?: string } } })
+    .originalFragment?.["x-stoplight"]?.id;
   if (nodeId) return nodeId;
 
   const key = node.path[node.path.length - 1];
 
-  return hash(['schema_property', parentId, String(key)].join('-'));
+  return hash(["schema_property", parentId, String(key)].join("-"));
 };

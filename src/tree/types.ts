@@ -3,10 +3,10 @@ import type {
   RegularNode,
   SchemaNodeKind,
   SchemaTreeRefDereferenceFn,
-} from '@stoplight/json-schema-tree';
-import type { Optional } from '@stoplight/types';
+} from "@stoplight/json-schema-tree";
+import type { Optional } from "@stoplight/types";
 
-import type { ViewMode } from '../types';
+import type { ViewMode } from "../types";
 
 export type SchemaTreeRefInfo = {
   source: string | null;
@@ -52,4 +52,8 @@ export type BrokenRefArrayNode = ArrayNode & {
   children: [ReferenceNode & { error: string }];
 };
 
-export type FlattenableNode = PrimitiveArrayNode | PrimitiveDictionaryNode | ComplexArrayNode | BrokenRefArrayNode;
+export type FlattenableNode =
+  | PrimitiveArrayNode
+  | PrimitiveDictionaryNode
+  | ComplexArrayNode
+  | BrokenRefArrayNode;

@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+}
+
+.json-schema-viewer {
+  /* light theme defaults - shadcn-like neutral palette */
+  --jsv-surface: oklch(100% 0 0);
+  --jsv-surface-raised: oklch(100% 0 0);
+  --jsv-surface-muted: oklch(96.5% 0 0);
+  --jsv-border: oklch(89.8% 0 0);
+  --jsv-border-strong: oklch(83% 0 0);
+  --jsv-text: oklch(9% 0 0);
+  --jsv-muted: oklch(45.9% 0 0);
+  --jsv-accent: oklch(47.6% 0.004 265);
+  --jsv-accent-strong: oklch(38% 0.006 265);
+  --jsv-warning: oklch(65% 0.1 75);
+  --jsv-danger: oklch(55% 0.12 25);
+  --jsv-code-bg: oklch(96.5% 0 0);
+  --jsv-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --jsv-radius-sm: 6px;
+  --jsv-radius-md: 8px;
+  --jsv-gap-xs: 4px;
+  --jsv-gap-sm: 6px;
+  --jsv-gap-md: 10px;
+  --jsv-gap-lg: 16px;
+  --jsv-font-sans: "DM Sans", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --jsv-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  
+  /* Font sizes - semantic naming with size suffix */
+  --jsv-font-size-base: 14px;
+  --jsv-font-size-title: 12px;
+  --jsv-font-size-description: 12px;
+  --jsv-font-size-type: 12px;
+  --jsv-font-size-property: 12px;
+  --jsv-font-size-validation: 11px;
+  --jsv-font-size-breadcrumb: 12px;
+  --jsv-font-size-code: 12px;
+  --jsv-font-size-tag: 12px;
+  
+  --jsv-line-height: 1.5;
+  --jsv-line-muted: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--jsv-border) 80%, transparent) 0%,
+    transparent 100%
+  );
+  --jsv-change-added: oklch(60% 0.18 145);
+  --jsv-change-removed: oklch(58% 0.20 25);
+  --jsv-change-modified: oklch(75% 0.20 95);
+  color: var(--jsv-text);
+  background: transparent;
+  font-family: var(--jsv-font-sans);
+  font-size: var(--jsv-font-size-base);
+  line-height: var(--jsv-line-height);
+}
+
+.json-schema-viewer[data-theme="dark"],
+.json-schema-viewer.jsv-theme-dark {
+  color-scheme: dark;
+  --jsv-surface: oklch(10% 0 0);
+  --jsv-surface-raised: oklch(14.5% 0 0);
+  --jsv-surface-muted: oklch(17% 0 0);
+  --jsv-border: oklch(27.8% 0 0);
+  --jsv-border-strong: oklch(37% 0 0);
+  --jsv-text: oklch(98% 0 0);
+  --jsv-muted: oklch(63.9% 0 0);
+  --jsv-accent: oklch(83% 0.004 265);
+  --jsv-accent-strong: oklch(90% 0.006 265);
+  --jsv-warning: oklch(75% 0.12 80);
+  --jsv-danger: oklch(70% 0.13 25);
+  --jsv-code-bg: oklch(14.5% 0 0);
+  --jsv-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --jsv-change-added: oklch(68% 0.19 145);
+  --jsv-change-removed: oklch(66% 0.21 25);
+  --jsv-change-modified: oklch(80% 0.20 95);
+}
+
+.json-schema-viewer * {
+  box-sizing: border-box;
+}
+
+.json-schema-viewer a {
+  color: var(--jsv-accent);
+  text-decoration: none;
+}
+
+.json-schema-viewer a:hover,
+.json-schema-viewer a:focus-visible {
+  color: var(--jsv-accent-strong);
+  text-decoration: underline;
+}
+
+.json-schema-viewer code,
+.json-schema-viewer pre {
+  font-family: var(--jsv-font-mono);
+}
+
+.json-schema-viewer pre {
+  background: var(--jsv-code-bg);
+  padding: var(--jsv-gap-sm);
+  border-radius: var(--jsv-radius-sm);
+  overflow: auto;
+}
+
+.json-schema-viewer .jsv-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: var(--jsv-font-size-tag);
+  line-height: 1.4;
+  background: transparent;
+  color: var(--jsv-muted);
+  border: 1px solid var(--jsv-border);
+}
+
+.json-schema-viewer .jsv-tag.warning {
+  background: transparent;
+  color: var(--jsv-warning);
+  border-color: color-mix(in oklab, var(--jsv-warning) 30%, var(--jsv-border));
+}
+
+.json-schema-viewer .jsv-tag.danger {
+  background: transparent;
+  color: var(--jsv-danger);
+  border-color: color-mix(in oklab, var(--jsv-danger) 30%, var(--jsv-border));
+}
+
+.json-schema-viewer .jsv-fade-divider {
+  background-image: var(--jsv-line-muted);
+  height: 1px;
+  width: 100%;
+}

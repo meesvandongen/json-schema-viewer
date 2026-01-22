@@ -1,11 +1,11 @@
-import { isRegularNode, isRootNode, SchemaNode } from '@stoplight/json-schema-tree';
-import { atom } from 'jotai';
+import { isRegularNode, isRootNode, type SchemaNode } from "@stoplight/json-schema-tree";
+import { atom } from "jotai";
 
-import { hoveredNodeAtom } from '../SchemaRow/state';
+import { hoveredNodeAtom } from "../SchemaRow/state";
 
 export const showPathCrumbsAtom = atom<boolean>(false);
 
-export const pathCrumbsAtom = atom(get => {
+export const pathCrumbsAtom = atom((get) => {
   const node = get(hoveredNodeAtom);
 
   if (!node) return [];
@@ -21,8 +21,8 @@ function propertyPathToObjectPath(node: SchemaNode) {
     if (isRegularNode(currentNode)) {
       const pathPart = currentNode.subpath[currentNode.subpath.length - 1];
 
-      if (currentNode.primaryType === 'array') {
-        const key = `${pathPart || ''}[]`;
+      if (currentNode.primaryType === "array") {
+        const key = `${pathPart || ""}[]`;
         if (objectPath[objectPath.length - 1]) {
           objectPath[objectPath.length - 1] = key;
         } else {
@@ -30,9 +30,13 @@ function propertyPathToObjectPath(node: SchemaNode) {
         }
       } else if (
         pathPart &&
-        (currentNode.subpath.length !== 2 || !['allOf', 'oneOf', 'anyOf'].includes(currentNode.subpath[0]))
+        (currentNode.subpath.length !== 2 ||
+          (currentNode.subpath[0] && !["allOf", "oneOf", "anyOf"].includes(currentNode.subpath[0])))
       ) {
-        objectPath.push(currentNode.subpath[currentNode.subpath.length - 1]);
+        const lastSubpath = currentNode.subpath[currentNode.subpath.length - 1];
+        if (lastSubpath) {
+          objectPath.push(lastSubpath);
+        }
       }
     }
 

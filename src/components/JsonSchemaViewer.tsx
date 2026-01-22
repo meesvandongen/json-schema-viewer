@@ -1,22 +1,28 @@
 import {
   isRegularNode,
-  RootNode,
   SchemaTree as JsonSchemaTree,
-  SchemaTreeRefDereferenceFn,
-} from '@stoplight/json-schema-tree';
-import { Box, Provider as MosaicProvider } from '@stoplight/mosaic';
-import { ErrorBoundaryForwardedProps, FallbackProps, withErrorBoundary } from '@stoplight/react-error-boundary';
-import cn from 'classnames';
-import { Provider } from 'jotai';
-import { useUpdateAtom } from 'jotai/utils';
-import * as React from 'react';
+  type RootNode,
+  type SchemaTreeRefDereferenceFn,
+} from "@stoplight/json-schema-tree";
+import type {
+  ErrorBoundaryForwardedProps,
+  FallbackProps,
+} from "@stoplight/react-error-boundary";
+import { withErrorBoundary } from "@stoplight/react-error-boundary";
+import cn from "classnames";
+import { Provider, useSetAtom } from "jotai";
+import * as React from "react";
 
-import { JSVOptions, JSVOptionsContextProvider } from '../contexts';
-import { shouldNodeBeIncluded } from '../tree/utils';
-import { JSONSchema } from '../types';
-import { PathCrumbs } from './PathCrumbs';
-import { TopLevelSchemaRow } from './SchemaRow';
-import { hoveredNodeAtom } from './SchemaRow/state';
+import type { JSVOptions } from "../contexts";
+import { JSVOptionsContextProvider } from "../contexts";
+import { shouldNodeBeIncluded } from "../tree/utils";
+import type { JSONSchema } from "../types";
+import { PathCrumbs } from "./PathCrumbs";
+import { TopLevelSchemaRow } from "./SchemaRow";
+import { hoveredNodeAtom } from "./SchemaRow/state";
+import shellStyles from "./shared/JsonSchemaViewerShell.module.css";
+import "../styles/theme.css";
+import "../styles/viewer.css";
 
 export type JsonSchemaProps = Partial<JSVOptions> & {
   schema: JSONSchema;
@@ -32,7 +38,7 @@ export type JsonSchemaProps = Partial<JSVOptions> & {
 };
 
 const JsonSchemaViewerComponent = ({
-  viewMode = 'standalone',
+  viewMode = "standalone",
   defaultExpandedDepth = 1,
   onGoToRef,
   renderRowAddon,
@@ -70,13 +76,15 @@ const JsonSchemaViewerComponent = ({
   );
 
   return (
-    <MosaicProvider>
-      <JSVOptionsContextProvider value={options}>
-        <Provider>
-          <JsonSchemaViewerInner viewMode={viewMode} skipTopLevelDescription={skipTopLevelDescription} {...rest} />
-        </Provider>
-      </JSVOptionsContextProvider>
-    </MosaicProvider>
+    <JSVOptionsContextProvider value={options}>
+      <Provider>
+        <JsonSchemaViewerInner
+          viewMode={viewMode}
+          skipTopLevelDescription={skipTopLevelDescription}
+          {...rest}
+        />
+      </Provider>
+    </JSVOptionsContextProvider>
   );
 };
 
@@ -86,25 +94,25 @@ const JsonSchemaViewerInner = ({
   className,
   resolveRef,
   maxRefDepth,
-  emptyText = 'No schema defined',
+  emptyText = "No schema defined",
   onTreePopulated,
   maxHeight,
   parentCrumbs,
   skipTopLevelDescription,
 }: Pick<
   JsonSchemaProps,
-  | 'schema'
-  | 'viewMode'
-  | 'className'
-  | 'resolveRef'
-  | 'maxRefDepth'
-  | 'emptyText'
-  | 'onTreePopulated'
-  | 'maxHeight'
-  | 'parentCrumbs'
-  | 'skipTopLevelDescription'
+  | "schema"
+  | "viewMode"
+  | "className"
+  | "resolveRef"
+  | "maxRefDepth"
+  | "emptyText"
+  | "onTreePopulated"
+  | "maxHeight"
+  | "parentCrumbs"
+  | "skipTopLevelDescription"
 >) => {
-  const setHoveredNode = useUpdateAtom(hoveredNodeAtom);
+  const setHoveredNode = useSetAtom(hoveredNodeAtom);
   const onMouseLeave = React.useCallback(() => {
     setHoveredNode(null);
   }, [setHoveredNode]);
@@ -118,7 +126,7 @@ const JsonSchemaViewerInner = ({
 
     let nodeCount = 0;
 
-    jsonSchemaTree.walker.hookInto('filter', node => {
+    jsonSchemaTree.walker.hookInto("filter", (node) => {
       if (shouldNodeBeIncluded(node, viewMode)) {
         nodeCount++;
         return true;
@@ -141,43 +149,54 @@ const JsonSchemaViewerInner = ({
   }, [jsonSchemaTreeRoot, onTreePopulated, nodeCount]);
 
   const isEmpty = React.useMemo(
-    () => jsonSchemaTreeRoot.children.every(node => !isRegularNode(node) || node.unknown),
+    () => jsonSchemaTreeRoot.children.every((node) => !isRegularNode(node) || node.unknown),
     [jsonSchemaTreeRoot],
   );
   if (isEmpty) {
     return (
-      <Box className={cn(className, 'JsonSchemaViewer')} fontSize="sm" data-test="empty-text">
-        {emptyText}
-      </Box>
+      <div
+        className={cn(className, shellStyles.viewer, "json-schema-viewer")}
+        data-test="empty-text"
+      >
+        <div className={shellStyles.empty}>{emptyText}</div>
+      </div>
     );
   }
 
   return (
-    <Box
-      className={cn('JsonSchemaViewer', className)}
-      pos={maxHeight ? 'relative' : undefined}
-      overflowY={maxHeight ? 'auto' : undefined}
+    <div
+      className={cn(shellStyles.viewer, "json-schema-viewer", className)}
+      style={{
+        maxHeight,
+        overflowY: maxHeight ? "auto" : undefined,
+        position: maxHeight ? "relative" : undefined,
+      }}
       onMouseLeave={onMouseLeave}
-      style={{ maxHeight }}
+      role="region"
+      tabIndex={0}
+      aria-label="JSON schema viewer"
     >
       <PathCrumbs parentCrumbs={parentCrumbs} />
-      <TopLevelSchemaRow schemaNode={jsonSchemaTreeRoot.children[0]} skipDescription={skipTopLevelDescription} />
-    </Box>
+      {jsonSchemaTreeRoot.children[0] && (
+        <TopLevelSchemaRow
+          schemaNode={jsonSchemaTreeRoot.children[0]}
+          skipDescription={skipTopLevelDescription}
+        />
+      )}
+    </div>
   );
 };
 
 const JsonSchemaFallbackComponent = ({ error }: FallbackProps) => {
   return (
-    <Box p={4}>
-      <Box as="b" color="danger">
-        Error
-      </Box>
+    <div className={cn(shellStyles.viewer, "json-schema-viewer")}>
+      <div style={{ color: "var(--jsv-danger)", fontWeight: 700 }}>Error</div>
       {error !== null ? `: ${error.message}` : null}
-    </Box>
+    </div>
   );
 };
 
 export const JsonSchemaViewer = withErrorBoundary<JsonSchemaProps>(JsonSchemaViewerComponent, {
   FallbackComponent: JsonSchemaFallbackComponent,
-  recoverableProps: ['schema'],
+  recoverableProps: ["schema"],
 });

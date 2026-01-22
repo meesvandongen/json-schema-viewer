@@ -1594,7 +1594,18 @@
           "type": "integer"
         }
       },
-      "required": ["url", "total_count", "+1", "-1", "laugh", "confused", "heart", "hooray", "eyes", "rocket"]
+      "required": [
+        "url",
+        "total_count",
+        "+1",
+        "-1",
+        "laugh",
+        "confused",
+        "heart",
+        "hooray",
+        "eyes",
+        "rocket"
+      ]
     }
   }
 }

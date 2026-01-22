@@ -1,11 +1,10 @@
-import { SchemaNode } from '@stoplight/json-schema-tree';
-import { Box, SpaceVals } from '@stoplight/mosaic';
-import type { ChangeType } from '@stoplight/types';
-import * as React from 'react';
+import type { SchemaNode } from "@stoplight/json-schema-tree";
+import type { ChangeType } from "@stoplight/types";
+import * as React from "react";
 
-import { NESTING_OFFSET } from '../../consts';
-import { useJSVOptionsContext } from '../../contexts';
-import { SchemaRow, SchemaRowProps } from '../SchemaRow';
+import { useJSVOptionsContext } from "../../contexts";
+import { SchemaRow, type SchemaRowProps } from "../SchemaRow";
+import styles from "./ChildStack.module.css";
 
 type ChildStackProps = {
   schemaNode: SchemaNode;
@@ -30,30 +29,25 @@ export const ChildStack = React.memo(
     const rootLevel = renderRootTreeLines ? 0 : 1;
     const isRootLevel = currentNestingLevel < rootLevel;
 
-    let ml: SpaceVals | undefined;
-    if (!isRootLevel) {
-      ml = currentNestingLevel === rootLevel ? 'px' : 7;
-    }
-
     return (
-      <Box
-        className={className}
-        ml={ml}
-        fontSize="sm"
-        borderL={isRootLevel ? undefined : true}
+      <div
+        className={`${styles.stack} ${isRootLevel ? styles.root : ""} ${className ?? ""}`}
         data-level={currentNestingLevel}
+        style={{
+          ['--parent-nesting-level' as string]: currentNestingLevel,
+          ['--root-level' as string]: rootLevel
+        }}
       >
         {childNodes.map((childNode: SchemaNode) => (
           <RowComponent
             key={childNode.id}
             schemaNode={childNode}
             nestingLevel={currentNestingLevel + 1}
-            pl={isRootLevel ? undefined : NESTING_OFFSET}
             parentNodeId={parentNodeId}
             parentChangeType={parentChangeType}
           />
         ))}
-      </Box>
+      </div>
     );
   },
 );

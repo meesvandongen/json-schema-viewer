@@ -1,3 +1,3 @@
-export * from './JsonSchemaViewer';
-export * from './SchemaRow';
-export * from './shared';
+export * from "./JsonSchemaViewer";
+export * from "./SchemaRow";
+export * from "./shared";

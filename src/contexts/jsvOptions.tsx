@@ -1,7 +1,7 @@
-import type { NodeHasChangedFn } from '@stoplight/types';
-import * as React from 'react';
+import type { NodeHasChangedFn } from "@stoplight/types";
+import * as React from "react";
 
-import { ExtensionAddonRenderer, GoToRefHandler, RowAddonRenderer, ViewMode } from '../types';
+import type { ExtensionAddonRenderer, GoToRefHandler, RowAddonRenderer, ViewMode } from "../types";
 
 export type JSVOptions = {
   defaultExpandedDepth: number;
@@ -17,7 +17,7 @@ export type JSVOptions = {
 
 const JSVOptionsContext = React.createContext<JSVOptions>({
   defaultExpandedDepth: 0,
-  viewMode: 'standalone',
+  viewMode: "standalone",
   hideExamples: false,
 });
 

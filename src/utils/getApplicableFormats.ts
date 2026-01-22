@@ -1,9 +1,11 @@
-import { isPlainObject } from '@stoplight/json';
-import { RegularNode, SchemaNodeKind } from '@stoplight/json-schema-tree';
+import { isPlainObject } from "@stoplight/json";
+import { RegularNode, SchemaNodeKind } from "@stoplight/json-schema-tree";
 
-import { COMMON_JSON_SCHEMA_AND_OAS_FORMATS } from '../consts';
+import { COMMON_JSON_SCHEMA_AND_OAS_FORMATS } from "../consts";
 
-export function getApplicableFormats(schemaNode: RegularNode): [type: SchemaNodeKind, format: string] | null {
+export function getApplicableFormats(
+  schemaNode: RegularNode,
+): [type: SchemaNodeKind, format: string] | null {
   // JSON Schema itself doesn't directly support defining binary data types.
   // Within the http-spec repository, we address this limitation using
   // OpenAPI features i.e. `contentMediaType: 'application/octet-stream'`.
@@ -11,11 +13,14 @@ export function getApplicableFormats(schemaNode: RegularNode): [type: SchemaNode
 
   if (
     isPlainObject(schemaNode.fragment) &&
-    schemaNode.fragment['contentMediaType'] === 'application/octet-stream' &&
+    schemaNode.fragment["contentMediaType"] === "application/octet-stream" &&
     schemaNode.types &&
     schemaNode.types.length > 0
   ) {
-    return [schemaNode.types[0], 'binary'];
+    const firstType = schemaNode.types[0];
+    if (firstType !== undefined) {
+      return [firstType, "binary"];
+    }
   }
 
   if (schemaNode.format === null) {
@@ -26,7 +31,8 @@ export function getApplicableFormats(schemaNode: RegularNode): [type: SchemaNode
     for (const type of schemaNode.types) {
       if (!(type in COMMON_JSON_SCHEMA_AND_OAS_FORMATS)) continue;
 
-      if (COMMON_JSON_SCHEMA_AND_OAS_FORMATS[type].includes(schemaNode.format)) {
+      const formats = COMMON_JSON_SCHEMA_AND_OAS_FORMATS[type];
+      if (formats !== undefined && formats.includes(schemaNode.format)) {
         return [type, schemaNode.format];
       }
     }

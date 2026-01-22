@@ -1,51 +1,45 @@
-import { MarkdownViewer } from '@stoplight/markdown-viewer';
-import { Box, Link, Text } from '@stoplight/mosaic';
-import * as React from 'react';
+import * as React from "react";
+import ReactMarkdown from "react-markdown";
 
-export const Description: React.FunctionComponent<{ value: unknown }> = ({ value }) => {
+import styles from "./Description.module.css";
+
+export interface DescriptionProps {
+  value: unknown;
+}
+
+export const Description: React.FunctionComponent<DescriptionProps> = ({ value }) => {
   const [showAll, setShowAll] = React.useState(false);
 
-  if (typeof value !== 'string' || value.trim().length === 0) return null;
+  if (typeof value !== "string" || value.trim().length === 0) return null;
 
-  const paragraphs = value.split('\n\n');
+  const paragraphs = value.split("\n\n");
 
   if (paragraphs.length <= 1 || showAll) {
     return (
-      <Box
-        as={MarkdownViewer}
-        data-test="property-description"
-        markdown={value}
-        style={{
-          fontSize: 12,
-        }}
-      />
+      <div className={styles.description} data-test="property-description">
+        <ReactMarkdown>{value}</ReactMarkdown>
+      </div>
     );
   }
 
   const firstParagraph = paragraphs[0];
 
   return (
-    <Box
-      as={MarkdownViewer}
-      data-test="property-description"
-      markdown={firstParagraph}
-      parseOptions={{
-        components: {
-          p: (props: any) => {
-            return (
-              <Box as="p">
-                <Text mr={1}>{props.children}</Text>
-                <Link cursor="pointer" onClick={() => setShowAll(true)}>
-                  Show all...
-                </Link>
-              </Box>
-            );
-          },
-        },
-      }}
-      style={{
-        fontSize: 12,
-      }}
-    />
+    <div className={styles.description} data-test="property-description">
+      <ReactMarkdown
+        components={{
+          p: ({ children }) => (
+            <p>
+              <span>{children}</span>{" "}
+              <button type="button" className={styles.showMore} onClick={() => setShowAll(true)}>
+                Show all...
+              </button>
+            </p>
+          ),
+        }}
+      >
+        {firstParagraph}
+      </ReactMarkdown>
+    </div>
   );
 };

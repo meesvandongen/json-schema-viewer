@@ -1,13 +1,13 @@
-/* eslint-disable prettier/prettier */
-import { isRegularNode, RegularNode } from '@stoplight/json-schema-tree';
-import { Flex, HStack, Text } from '@stoplight/mosaic';
-import { Dictionary } from '@stoplight/types';
-import capitalize from 'lodash/capitalize.js';
-import keys from 'lodash/keys.js';
-import omit from 'lodash/omit.js';
-import pick from 'lodash/pick.js';
-import uniq from 'lodash/uniq.js';
-import * as React from 'react';
+import { isRegularNode, type RegularNode } from "@stoplight/json-schema-tree";
+import type { Dictionary } from "@stoplight/types";
+import capitalize from "lodash/capitalize.js";
+import keys from "lodash/keys.js";
+import omit from "lodash/omit.js";
+import pick from "lodash/pick.js";
+import uniq from "lodash/uniq.js";
+import * as React from "react";
+
+import styles from "./Validations.module.css";
 
 export interface IValidations {
   validations: Dictionary<unknown>;
@@ -20,35 +20,35 @@ type ValidationFormat = {
 };
 
 export const numberValidationNames = [
-  'minimum',
-  'maximum',
-  'minLength',
-  'maxLength',
-  'minItems',
-  'maxItems',
-  'exclusiveMinimum',
-  'exclusiveMaximum',
+  "minimum",
+  "maximum",
+  "minLength",
+  "maxLength",
+  "minItems",
+  "maxItems",
+  "exclusiveMinimum",
+  "exclusiveMaximum",
 ];
 
 type NumberValidationNames = typeof numberValidationNames;
 
-const exampleValidationNames = ['examples'];
+const exampleValidationNames = ["examples"];
 
-const excludedValidations = ['exclusiveMinimum', 'exclusiveMaximum', 'readOnly', 'writeOnly'];
+const excludedValidations = ["exclusiveMinimum", "exclusiveMaximum", "readOnly", "writeOnly"];
 
 const numberValidationFormatters: Record<string, (value: unknown) => string> = {
-  minimum: value => `>= ${value}`,
-  exclusiveMinimum: value => `> ${value}`,
-  minItems: value => `>= ${value} items`,
-  minLength: value => `>= ${value} characters`,
-  maximum: value => `<= ${value}`,
-  exclusiveMaximum: value => `< ${value}`,
-  maxItems: value => `<= ${value} items`,
-  maxLength: value => `<= ${value} characters`,
+  minimum: (value) => `>= ${value}`,
+  exclusiveMinimum: (value) => `> ${value}`,
+  minItems: (value) => `>= ${value} items`,
+  minLength: (value) => `>= ${value} characters`,
+  maximum: (value) => `<= ${value}`,
+  exclusiveMaximum: (value) => `< ${value}`,
+  maxItems: (value) => `<= ${value} items`,
+  maxLength: (value) => `<= ${value} characters`,
 };
 
 const createStringFormatter = (nowrap: boolean | undefined) => (value: unknown) => {
-  return nowrap && typeof value === 'string' ? value : JSON.stringify(value);
+  return nowrap && typeof value === "string" ? value : JSON.stringify(value);
 };
 
 const createValidationsFormatter =
@@ -65,17 +65,15 @@ const createValidationsFormatter =
   };
 
 const validationFormatters: Record<string, (value: unknown) => ValidationFormat | null> = {
-  enum: createValidationsFormatter('Allowed value', { nowrap: true }),
-  examples: createValidationsFormatter('Example', { nowrap: true }),
-  multipleOf: createValidationsFormatter('Multiple of', { exact: true }),
-  pattern: createValidationsFormatter('Match pattern', { exact: true, nowrap: true }),
-  default: createValidationsFormatter('Default', { exact: true, nowrap: true }),
-  style: createValidationsFormatter('Style', { exact: true, nowrap: true }),
+  enum: createValidationsFormatter("Allowed value", { nowrap: true }),
+  examples: createValidationsFormatter("Example", { nowrap: true }),
+  multipleOf: createValidationsFormatter("Multiple of", { exact: true }),
+  pattern: createValidationsFormatter("Match pattern", { exact: true, nowrap: true }),
+  default: createValidationsFormatter("Default", { exact: true, nowrap: true }),
+  style: createValidationsFormatter("Style", { exact: true, nowrap: true }),
 };
 
-
 const oasFormats = {
-
   int32: {
     minimum: 0 - 2 ** 31,
     maximum: 2 ** 31 - 1,
@@ -93,7 +91,7 @@ const oasFormats = {
     maximum: Number.MAX_VALUE,
   },
   byte: {
-    pattern: '^[\\w\\d+\\/=]*$',
+    pattern: "^[\\w\\d+\\/=]*$",
   },
 };
 
@@ -117,7 +115,10 @@ function filterOutOasFormatValidations(format: string, values: Dictionary<unknow
   return newValues;
 }
 
-export const Validations: React.FunctionComponent<IValidations> = ({ validations, hideExamples }) => {
+export const Validations: React.FunctionComponent<IValidations> = ({
+  validations,
+  hideExamples,
+}) => {
   const numberValidations = pick(validations, numberValidationNames);
   const keyValueValidations = omit(validations, [
     ...keys(numberValidations),
@@ -125,98 +126,117 @@ export const Validations: React.FunctionComponent<IValidations> = ({ validations
     ...(hideExamples ? exampleValidationNames : []),
   ]);
 
+  const numberEntries = Object.entries(numberValidations);
+  const keyValueEntries = keys(keyValueValidations).filter(
+    (key) => Object.keys(validationFormatters).includes(key) && (keyValueValidations as Dictionary<unknown>)[key] !== void 0,
+  );
+
+  if (!numberEntries.length && !keyValueEntries.length) {
+    return null;
+  }
+
   return (
-    <>
-      <NumberValidations validations={numberValidations} />
-      <KeyValueValidations validations={keyValueValidations} />
-    </>
+    <div className={styles.validationsGroup} data-test="property-validation">
+      <NumberValidations entries={numberEntries} />
+      <KeyValueValidations keysList={keyValueEntries} validations={keyValueValidations} />
+    </div>
   );
 };
 
 const NumberValidations = ({
-  validations,
+  entries,
 }: {
-  validations: Partial<Record<NumberValidationNames[number], unknown>>;
+  entries: Array<[NumberValidationNames[number], unknown]>;
 }) => {
-  const entries = Object.entries(validations);
   if (!entries.length) {
     return null;
   }
   return (
-    <HStack color="muted" maxW="full" spacing={1} data-test="property-validation">
+    <div className={styles.numberRow}>
       {entries
-        .map(([key, value]) => numberValidationFormatters[key](value))
-        .map((value, i) => (
-          <Value key={i} name={value} />
-        ))}
-    </HStack>
+        .map(([key, value]) => {
+          const formatter = numberValidationFormatters[key];
+          return formatter ? formatter(value) : null;
+        })
+        .filter((value): value is string => value !== null)
+        .map((value, i) => {
+          const entry = entries[i];
+          return entry ? <Value key={`${entry[0]}-${value}`} name={value} /> : null;
+        })}
+    </div>
   );
 };
 
-const KeyValueValidations = ({ validations }: { validations: Dictionary<unknown> }) => (
+const KeyValueValidations = ({
+  keysList,
+  validations,
+}: {
+  keysList: string[];
+  validations: Dictionary<unknown>;
+}) => (
   <>
-    {keys(validations)
-      .filter(key => Object.keys(validationFormatters).includes(key) && validations[key] !== void 0)
-      .map(key => {
-        const validation = validationFormatters[key](validations[key]);
+    {keysList.map((key) => {
+      const formatter = validationFormatters[key];
+      const validationValue = validations[key];
+      if (formatter && validationValue !== undefined) {
+        const validation = formatter(validationValue);
         if (validation) {
           return <KeyValueValidation key={key} name={validation.name} values={validation.values} />;
-        } else {
-          return null;
         }
-      })}
+      }
+      return null;
+    })}
   </>
 );
 
-const KeyValueValidation = ({ name, values }: { name: string; values: string[] }) => {
-  return (
-    <HStack color="muted" spacing={2} alignItems="baseline" data-test="property-validation">
-      <Text>{capitalize(name)}:</Text>
-
-      <Flex flexWrap flex={1} style={{ gap: 4 }}>
-        {uniq(values).map(value => (
-          <Value key={value} name={value} />
-        ))}
-      </Flex>
-    </HStack>
-  );
-};
-
-const Value = ({ name }: { name: string }) => (
-  <Text px={1} bg="canvas-tint" color="muted" border rounded wordBreak="all" maxW="full">
-    {name}
-  </Text>
+const KeyValueValidation = ({ name, values }: { name: string; values: string[] }) => (
+  <div className={styles.validationRow}>
+    <span>{capitalize(name)}:</span>
+    <span className={styles.values}>
+      {uniq(values).map((value) => (
+        <Value key={value} name={value} />
+      ))}
+    </span>
+  </div>
 );
+
+const Value = ({ name }: { name: string }) => <span className={styles.value}>{name}</span>;
 
 export function validationCount(schemaNode: RegularNode) {
   const validations = getValidationsFromSchema(schemaNode);
   const validationKeys = keys(omit(validations, excludedValidations));
-  return uniq(validationKeys.map(key => ([...numberValidationNames].includes(key) ? 'number' : key))).length;
+  return uniq(
+    validationKeys.map((key) => ([...numberValidationNames].includes(key) ? "number" : key)),
+  ).length;
 }
 
 const getArrayValidations = (schemaNode: RegularNode) => {
-  if (schemaNode.children?.length === 1 && isRegularNode(schemaNode.children[0])) {
-    if (schemaNode.children[0].enum !== null) {
-      return { enum: schemaNode.children[0].enum };
-    } else if (schemaNode.children[0].fragment.pattern !== void 0) {
-      return { pattern: schemaNode.children[0].fragment.pattern };
+  const firstChild = schemaNode.children?.[0];
+  if (firstChild && isRegularNode(firstChild)) {
+    if (firstChild.enum !== null) {
+      return { enum: firstChild.enum };
+    } else if (firstChild.fragment.pattern !== void 0) {
+      return { pattern: firstChild.fragment.pattern };
     }
   }
   return null;
 };
 
 export function getValidationsFromSchema(schemaNode: RegularNode) {
+  const arrayValidations = schemaNode.primaryType === "array" ? getArrayValidations(schemaNode) : null;
+  
   return {
     ...(schemaNode.enum !== null
       ? { enum: schemaNode.enum }
-      : schemaNode.primaryType === 'array'
-      ? // in case schemaNode is type: "array", check if its child has an additional validation
-        getArrayValidations(schemaNode)
-      : null),
-    ...('annotations' in schemaNode
+      : arrayValidations),
+    ...("annotations" in schemaNode
       ? {
-          ...(schemaNode.annotations.default !== void 0 ? { default: schemaNode.annotations.default } : null),
-          ...(schemaNode.annotations.examples ? { examples: schemaNode.annotations.examples } : null),
+          ...(schemaNode.annotations.default !== void 0
+            ? { default: schemaNode.annotations.default }
+            : null),
+          ...(schemaNode.annotations.examples
+            ? { examples: schemaNode.annotations.examples }
+            : null),
         }
       : null),
     ...getFilteredValidations(schemaNode),

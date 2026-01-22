@@ -1,0 +1,18 @@
+.errorIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: var(--jsv-danger);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltipContent {
+  display: none;
+}

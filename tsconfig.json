@@ -1,11 +1,32 @@
 {
-  "extends": "@stoplight/scripts/tsconfig.json",
-  // target all ts files
-  "include": ["."],
-  "exclude": ["dist/"],
+  "include": ["src", "scripts", "tsconfig.json", ".storybook", "vitest.config.ts"],
   "compilerOptions": {
-    "lib": ["dom", "webworker", "es2017", "dom.iterable"],
-    "target": "es2017",
-    "esModuleInterop": true
-  }
+    "lib": ["dom", "es2022", "dom.iterable"],
+    "target": "es2022",
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "types": ["vitest/globals", "node", "jest"],
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true
+  },
+  "exclude": [
+    "dist",
+    "src/__tests__/**",
+    "src/__stories__/**",
+    "**/*.spec.*",
+    "**/*.test.*",
+    "**/*.stories.*"
+  ]
 }

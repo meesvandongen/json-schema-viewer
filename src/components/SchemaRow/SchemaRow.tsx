@@ -1,33 +1,35 @@
-import { isMirroredNode, isReferenceNode, isRegularNode, SchemaNode } from '@stoplight/json-schema-tree';
-import { Box, Flex, NodeAnnotation, Select, SpaceVals, VStack } from '@stoplight/mosaic';
-import type { ChangeType } from '@stoplight/types';
-import { Atom } from 'jotai';
-import { useAtomValue, useUpdateAtom } from 'jotai/utils';
-import last from 'lodash/last.js';
-import * as React from 'react';
+import {
+  isMirroredNode,
+  isReferenceNode,
+  isRegularNode,
+  type SchemaNode,
+} from "@stoplight/json-schema-tree";
+import type { ChangeType } from "@stoplight/types";
+import { useSetAtom } from "jotai";
+import last from "lodash/last.js";
+import * as React from "react";
 
-import { COMBINER_NAME_MAP } from '../../consts';
-import { useJSVOptionsContext } from '../../contexts';
-import { getNodeId, getOriginalNodeId } from '../../hash';
-import { isPropertyRequired, visibleChildren } from '../../tree';
-import { extractVendorExtensions } from '../../utils/extractVendorExtensions';
-import { Caret, Description, getValidationsFromSchema, Types, Validations } from '../shared';
-import { ChildStack } from '../shared/ChildStack';
-import { Error } from '../shared/Error';
-import { Properties, useHasProperties } from '../shared/Properties';
-import { hoveredNodeAtom, isNodeHoveredAtom } from './state';
-import { useChoices } from './useChoices';
+import { COMBINER_NAME_MAP } from "../../consts";
+import { useJSVOptionsContext } from "../../contexts";
+import { getNodeId, getOriginalNodeId } from "../../hash";
+import { isPropertyRequired, visibleChildren } from "../../tree";
+import { extractVendorExtensions } from "../../utils/extractVendorExtensions";
+import { Caret, Description, getValidationsFromSchema, Types, Validations } from "../shared";
+import { ChildStack } from "../shared/ChildStack";
+import { Properties, useHasProperties } from "../shared/Properties";
+import styles from "../shared/SchemaRow.module.css";
+import { hoveredNodeAtom } from "./state";
+import { useChoices } from "./useChoices";
 
 export interface SchemaRowProps {
   schemaNode: SchemaNode;
   nestingLevel: number;
-  pl?: SpaceVals;
   parentNodeId?: string;
   parentChangeType?: ChangeType;
 }
 
 export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
-  ({ schemaNode, nestingLevel, pl, parentNodeId, parentChangeType }) => {
+  ({ schemaNode, nestingLevel, parentNodeId, parentChangeType }) => {
     const {
       defaultExpandedDepth,
       renderRowAddon,
@@ -39,13 +41,15 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
       viewMode,
     } = useJSVOptionsContext();
 
-    const setHoveredNode = useUpdateAtom(hoveredNodeAtom);
+    const setHoveredNode = useSetAtom(hoveredNodeAtom);
 
     const nodeId = getNodeId(schemaNode, parentNodeId);
 
     // @ts-expect-error originalFragment does exist...
-    const originalNodeId = schemaNode.originalFragment?.$ref ? getOriginalNodeId(schemaNode, parentNodeId) : nodeId;
-    const mode = viewMode === 'standalone' ? undefined : viewMode;
+    const originalNodeId = schemaNode.originalFragment?.$ref
+      ? getOriginalNodeId(schemaNode, parentNodeId)
+      : nodeId;
+    const mode = viewMode === "standalone" ? undefined : viewMode;
     const hasChanged = nodeHasChanged?.({ nodeId: originalNodeId, mode });
 
     const [isExpanded, setExpanded] = React.useState<boolean>(
@@ -53,14 +57,13 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
     );
 
     const { selectedChoice, setSelectedChoice, choices } = useChoices(schemaNode);
-    const typeToShow = selectedChoice.type;
+    const typeToShow = selectedChoice?.type ?? schemaNode;
     const description = isRegularNode(typeToShow) ? typeToShow.annotations.description : null;
 
-    const rootLevel = renderRootTreeLines ? 1 : 2;
     const childNodes = React.useMemo(() => visibleChildren(typeToShow), [typeToShow]);
-    const combiner = isRegularNode(schemaNode) && schemaNode.combiners?.length ? schemaNode.combiners[0] : null;
+    const combiner =
+      isRegularNode(schemaNode) && schemaNode.combiners?.length ? schemaNode.combiners[0] : null;
     const isCollapsible = childNodes.length > 0;
-    const isRootLevel = nestingLevel < rootLevel;
 
     const required = isPropertyRequired(schemaNode);
     const deprecated = isRegularNode(schemaNode) && schemaNode.deprecated;
@@ -78,104 +81,128 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
     if (nestingLevel > 1) {
       // annotationLeftOffset -= 27;
       annotationLeftOffset =
-        -1 * 29 * Math.max(nestingLevel - 1, 1) - Math.min(nestingLevel, 2) * 2 - 16 - annotationRootOffset;
+        -1 * 29 * Math.max(nestingLevel - 1, 1) -
+        Math.min(nestingLevel, 2) * 2 -
+        16 -
+        annotationRootOffset;
 
       if (!renderRootTreeLines) {
         annotationLeftOffset += 27;
       }
     }
+    
+    // Determine if this row should show tree lines
+    const rootLevel = renderRootTreeLines ? 0 : 1;
+    const isNested = nestingLevel > rootLevel;
 
-    if (parentChangeType === 'added' && hasChanged && hasChanged.type === 'removed') {
+    if (parentChangeType === "added" && hasChanged && hasChanged.type === "removed") {
       return null;
     }
 
-    if (parentChangeType === 'removed' && hasChanged && hasChanged.type === 'added') {
+    if (parentChangeType === "removed" && hasChanged && hasChanged.type === "added") {
       return null;
     }
 
     return (
       <>
-        <Flex
-          maxW="full"
-          pl={pl}
-          py={2}
+        <div
+          className={styles.row}
           data-id={originalNodeId}
           data-test="schema-row"
-          pos="relative"
-          onMouseEnter={(e: any) => {
-            e.stopPropagation();
-            setHoveredNode(selectedChoice.type);
-          }}
+          data-change-type={hasChanged ? hasChanged.type : undefined}
+          data-nested={isNested ? 'true' : 'false'}
+          data-has-chevron={isCollapsible ? 'true' : 'false'}
+          aria-label="Schema row"
+          role="presentation"
         >
-          {!isRootLevel && <Box borderT w={isCollapsible ? 1 : 3} ml={-3} mr={3} mt={2} />}
-          {parentChangeType !== 'added' && parentChangeType !== 'removed' ? (
-            <NodeAnnotation change={hasChanged} style={{ left: annotationLeftOffset }} />
-          ) : null}
-          <VStack spacing={1} maxW="full" flex={1} ml={isCollapsible && !isRootLevel ? 2 : undefined}>
-            <Flex
-              alignItems="center"
-              maxW="full"
-              onClick={isCollapsible ? () => setExpanded(!isExpanded) : undefined}
-              cursor={isCollapsible ? 'pointer' : undefined}
-            >
+          <div className={styles.indicators}>
+            {hasChanged && hasChanged.isBreaking && (
+              <span className={styles.breakingIcon} title="Breaking change">
+                !
+              </span>
+            )}
+            {hasChanged && (
+              <span 
+                className={styles.changeBar} 
+                title={
+                  hasChanged.type === 'added' ? 'Added' :
+                  hasChanged.type === 'removed' ? 'Removed' :
+                  hasChanged.type === 'modified' ? 'Modified' :
+                  undefined
+                }
+              />
+            )}
+          </div>
+          <div className={styles.content} style={{ 
+            ['--nesting-level' as string]: nestingLevel,
+            ['--root-level' as string]: rootLevel
+          }}>
+            <div className={styles.header}>
               {isCollapsible ? <Caret isExpanded={isExpanded} /> : null}
-              <Flex alignItems="baseline" fontSize="base">
+              <button
+                type="button"
+                className={styles.inline}
+                aria-expanded={isCollapsible ? isExpanded : undefined}
+                onMouseEnter={() => setHoveredNode(selectedChoice?.type ?? null)}
+                onFocus={() => setHoveredNode(selectedChoice?.type ?? null)}
+                onClick={isCollapsible ? () => setExpanded(!isExpanded) : undefined}
+                style={{ cursor: isCollapsible ? 'pointer' : 'default' }}
+              >
                 {schemaNode.subpath.length > 0 && shouldShowPropertyName(schemaNode) && (
-                  <Box
-                    mr={2}
-                    fontFamily="mono"
-                    fontWeight="semibold"
+                  <span
+                    className={styles.name}
                     data-test={`property-name-${last(schemaNode.subpath)}`}
                   >
                     {last(schemaNode.subpath)}
-                  </Box>
+                  </span>
                 )}
 
                 {choices.length === 1 && <Types schemaNode={typeToShow} />}
 
                 {onGoToRef && isReferenceNode(schemaNode) && schemaNode.external ? (
-                  <Box
-                    as="a"
-                    ml={2}
-                    cursor="pointer"
-                    color="primary-light"
-                    onClick={(e: React.MouseEvent) => {
+                  <button
+                    type="button"
+                    className={styles.pillLink}
+                    onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
                       onGoToRef(schemaNode);
                     }}
                   >
                     (go to ref)
-                  </Box>
+                  </button>
                 ) : null}
 
-                {schemaNode.subpath.length > 1 && schemaNode.subpath[0] === 'patternProperties' ? (
-                  <Box ml={2} color="muted">
-                    (pattern property)
-                  </Box>
+                {schemaNode.subpath.length > 1 && schemaNode.subpath[0] === "patternProperties" ? (
+                  <span className={styles.pillLink}>(pattern property)</span>
                 ) : null}
 
-                {choices.length > 1 && (
-                  <Select
+                {choices.length > 1 && selectedChoice && (
+                  <select
                     aria-label="Pick a type"
-                    size="sm"
-                    triggerTextPrefix={combiner ? `${COMBINER_NAME_MAP[combiner]}: ` : undefined}
-                    options={choices.map((choice, index) => ({
-                      value: String(index),
-                      label: choice.title,
-                    }))}
-                    value={
-                      String(choices.indexOf(selectedChoice))
-                      /* String to work around https://github.com/stoplightio/mosaic/issues/162 */
-                    }
-                    onChange={selectedIndex => setSelectedChoice(choices[selectedIndex as number])}
-                  />
+                    value={String(choices.indexOf(selectedChoice))}
+                    onClick={(e) => e.stopPropagation()}
+                    onKeyDown={(e) => e.stopPropagation()}
+                    onChange={(event) => {
+                      const choice = choices[Number(event.target.value)];
+                      if (choice) {
+                        setSelectedChoice(choice);
+                      }
+                    }}
+                  >
+                    {choices.map((choice, index) => (
+                      <option key={`${choice.title}-${index}`} value={String(index)}>
+                        {combiner ? `${COMBINER_NAME_MAP[combiner]}: ` : ""}
+                        {choice.title}
+                      </option>
+                    ))}
+                  </select>
                 )}
-              </Flex>
-              {hasProperties && <Divider atom={isNodeHoveredAtom(schemaNode)} />}
-              <Properties required={required} deprecated={deprecated} validations={validations} />
-            </Flex>
-            {typeof description === 'string' &&
+              </button>
+              {hasProperties && <div className={styles.divider} aria-hidden />}
+              <Properties required={required} deprecated={deprecated} validations={validations} schemaNode={schemaNode} />
+            </div>
+            {typeof description === "string" &&
               (!combiner || schemaNode.parent?.fragment.description !== description) &&
               description.length > 0 && <Description value={description} />}
             <Validations
@@ -183,19 +210,22 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
               hideExamples={hideExamples}
             />
             {hasVendorProperties && renderExtensionAddon ? (
-              <Box>{renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions })}</Box>
+              <div className={styles.vendor}>
+                {renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions })}
+              </div>
             ) : null}
-          </VStack>
-          <Error schemaNode={schemaNode} />
-          {renderRowAddon ? <Box>{renderRowAddon({ schemaNode, nestingLevel })}</Box> : null}
-        </Flex>
+          </div>
+          {renderRowAddon ? <div>{renderRowAddon({ schemaNode, nestingLevel })}</div> : null}
+        </div>
         {isCollapsible && isExpanded ? (
           <ChildStack
             schemaNode={schemaNode}
             childNodes={childNodes}
             currentNestingLevel={nestingLevel}
             parentNodeId={nodeId}
-            parentChangeType={parentChangeType ? parentChangeType : hasChanged ? hasChanged?.type : undefined}
+            parentChangeType={
+              parentChangeType ? parentChangeType : hasChanged ? hasChanged?.type : undefined
+            }
           />
         ) : null}
       </>
@@ -203,15 +233,9 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
   },
 );
 
-const Divider = ({ atom }: { atom: Atom<boolean> }) => {
-  const isHovering = useAtomValue(atom);
-
-  return <Box bg={isHovering ? 'canvas-200' : undefined} h="px" flex={1} mx={3} />;
-};
-
 function shouldShowPropertyName(schemaNode: SchemaNode) {
   return (
     schemaNode.subpath.length === 2 &&
-    (schemaNode.subpath[0] === 'properties' || schemaNode.subpath[0] === 'patternProperties')
+    (schemaNode.subpath[0] === "properties" || schemaNode.subpath[0] === "patternProperties")
   );
 }

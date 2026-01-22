@@ -1,6 +1,6 @@
-import type { ReferenceNode, SchemaNode } from '@stoplight/json-schema-tree';
-import { JSONSchema4, JSONSchema6, JSONSchema7 } from 'json-schema';
-import * as React from 'react';
+import type { ReferenceNode, SchemaNode } from "@stoplight/json-schema-tree";
+import type { JSONSchema4, JSONSchema6, JSONSchema7 } from "json-schema";
+import * as React from "react";
 
 export type GoToRefHandler = (node: ReferenceNode) => void;
 
@@ -19,6 +19,6 @@ export interface ExtensionRowProps {
 
 export type ExtensionAddonRenderer = (props: ExtensionRowProps) => React.ReactNode;
 
-export type ViewMode = 'read' | 'write' | 'standalone';
+export type ViewMode = "read" | "write" | "standalone";
 
 export type JSONSchema = JSONSchema4 | JSONSchema6 | JSONSchema7;

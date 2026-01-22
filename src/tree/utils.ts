@@ -1,5 +1,6 @@
-import { isPlainObject } from '@stoplight/json';
+import { isPlainObject } from "@stoplight/json";
 import {
+  BooleanishNode,
   type MirroredSchemaNode,
   type ReferenceNode,
   type RegularNode,
@@ -9,11 +10,10 @@ import {
   isRegularNode,
   isRootNode,
   SchemaNodeKind,
-} from '@stoplight/json-schema-tree';
-import { BooleanishNode } from '@stoplight/json-schema-tree/nodes/BooleanishNode';
+} from "@stoplight/json-schema-tree";
 
-import { isNonNullable } from '../guards/isNonNullable';
-import type { ViewMode } from '../types';
+import { isNonNullable } from "../guards/isNonNullable";
+import type { ViewMode } from "../types";
 import type {
   ArrayNode,
   ComplexArrayNode,
@@ -22,7 +22,7 @@ import type {
   FlattenableNode,
   PrimitiveArrayNode,
   PrimitiveDictionaryNode,
-} from './types';
+} from "./types";
 
 export type ChildNode = RegularNode | ReferenceNode | MirroredSchemaNode;
 
@@ -35,34 +35,57 @@ export const isNonEmptyParentNode = (
 export function isFlattenableNode(node: SchemaNode): node is FlattenableNode {
   if (!isRegularNode(node)) return false;
 
-  if ((!isArrayNode(node) && !isDictionaryNode(node)) || !isNonNullable(node.children) || node.children.length === 0) {
+  if (
+    (!isArrayNode(node) && !isDictionaryNode(node)) ||
+    !isNonNullable(node.children) ||
+    node.children.length === 0
+  ) {
     return false;
   }
 
+  const firstChild = node.children[0];
   return (
     node.children.length === 1 &&
-    ((isRegularNode(node.children[0]) && (!isArrayNode(node) || !isDictionaryNode(node.children[0]))) ||
-      (isReferenceNode(node.children[0]) && node.children[0].error !== null))
+    firstChild !== undefined &&
+    ((isRegularNode(firstChild) &&
+      (!isArrayNode(node) || !isDictionaryNode(firstChild))) ||
+      (isReferenceNode(firstChild) && firstChild.error !== null))
   );
 }
 
 export function isPrimitiveArray(node: SchemaNode): node is PrimitiveArrayNode {
-  return isFlattenableNode(node) && isArrayNode(node) && isRegularNode(node.children[0]) && node.children[0].simple;
+  return (
+    isFlattenableNode(node) &&
+    isArrayNode(node) &&
+    isRegularNode(node.children[0]) &&
+    node.children[0].simple
+  );
 }
 
 export function isPrimitiveDictionary(node: SchemaNode): node is PrimitiveDictionaryNode {
   return (
-    isFlattenableNode(node) && isDictionaryNode(node) && isRegularNode(node.children[0]) && node.children[0].simple
+    isFlattenableNode(node) &&
+    isDictionaryNode(node) &&
+    isRegularNode(node.children[0]) &&
+    node.children[0].simple
   );
 }
 
 export function isComplexArray(node: SchemaNode): node is ComplexArrayNode {
-  return isFlattenableNode(node) && isArrayNode(node) && isRegularNode(node.children[0]) && !node.children[0].simple;
+  return (
+    isFlattenableNode(node) &&
+    isArrayNode(node) &&
+    isRegularNode(node.children[0]) &&
+    !node.children[0].simple
+  );
 }
 
 export function isComplexDictionary(node: SchemaNode): node is ComplexDictionaryNode {
   return (
-    isFlattenableNode(node) && isDictionaryNode(node) && isRegularNode(node.children[0]) && !node.children[0].simple
+    isFlattenableNode(node) &&
+    isDictionaryNode(node) &&
+    isRegularNode(node.children[0]) &&
+    !node.children[0].simple
   );
 }
 
@@ -89,7 +112,8 @@ export function visibleChildren(node: SchemaNode): SchemaNode[] {
   }
   if (isComplexArray(node) || isComplexDictionary(node)) {
     // flatten the tree here, and show the properties of the item type directly
-    return node.children[0].children ?? [];
+    const firstChild = node.children[0];
+    return firstChild?.children ?? [];
   }
   return node.children ?? [];
 }
@@ -100,7 +124,8 @@ export function isPropertyRequired(schemaNode: SchemaNode): boolean {
     return false;
   }
 
-  return !!parent.required?.includes(schemaNode.subpath[schemaNode.subpath.length - 1]);
+  const lastSubpath = schemaNode.subpath[schemaNode.subpath.length - 1];
+  return lastSubpath !== undefined && !!parent.required?.includes(lastSubpath);
 }
 
 function isValidViewMode(node: RegularNode, viewMode: ViewMode): boolean {
@@ -110,7 +135,10 @@ function isValidViewMode(node: RegularNode, viewMode: ViewMode): boolean {
     return true;
   }
 
-  return !((viewMode === 'read' && !!validations.writeOnly) || (viewMode === 'write' && !!validations.readOnly));
+  return !(
+    (viewMode === "read" && !!validations.writeOnly) ||
+    (viewMode === "write" && !!validations.readOnly)
+  );
 }
 
 function isRenderableNode(node: BooleanishNode | RegularNode): boolean {
@@ -118,23 +146,27 @@ function isRenderableNode(node: BooleanishNode | RegularNode): boolean {
 
   if (isDictionaryNode(node.parent)) {
     // if dictionary, do not render explicitly defined properties
-    return node.subpath.length !== 2 || node.subpath[0] !== 'properties';
+    return node.subpath.length !== 2 || node.subpath[0] !== "properties";
   }
 
   // do not render additionalItems
   if (isArrayNode(node.parent)) {
-    return node.subpath[0] !== 'additionalItems';
+    return node.subpath[0] !== "additionalItems";
   }
 
   // do not render true/false additionalProperties
-  if (isRegularNode(node.parent) && node.parent.primaryType === SchemaNodeKind.Object && isBooleanishNode(node)) {
-    return !(node.subpath.length === 1 || node.subpath[0] === 'additionalProperties');
+  if (
+    isRegularNode(node.parent) &&
+    node.parent.primaryType === SchemaNodeKind.Object &&
+    isBooleanishNode(node)
+  ) {
+    return !(node.subpath.length === 1 || node.subpath[0] === "additionalProperties");
   }
 
   return true;
 }
 
-export function shouldNodeBeIncluded(node: SchemaNode, viewMode: ViewMode = 'standalone'): boolean {
+export function shouldNodeBeIncluded(node: SchemaNode, viewMode: ViewMode = "standalone"): boolean {
   return (
     (isReferenceNode(node) || isRootNode(node) || isRenderableNode(node)) &&
     (!isRegularNode(node) || isValidViewMode(node, viewMode))

@@ -1,9 +1,9 @@
-import { Box, HStack } from '@stoplight/mosaic';
-import { useAtom } from 'jotai';
-import * as React from 'react';
+import { useAtom } from "jotai";
+import * as React from "react";
 
-import { useJSVOptionsContext } from '../../contexts';
-import { pathCrumbsAtom, showPathCrumbsAtom } from './state';
+import { useJSVOptionsContext } from "../../contexts";
+import styles from "../shared/PathCrumbs.module.css";
+import { pathCrumbsAtom, showPathCrumbsAtom } from "./state";
 
 export const PathCrumbs = ({ parentCrumbs = [] }: { parentCrumbs?: string[] }) => {
   const [showPathCrumbs] = useAtom(showPathCrumbsAtom);
@@ -14,20 +14,32 @@ export const PathCrumbs = ({ parentCrumbs = [] }: { parentCrumbs?: string[] }) =
     return null;
   }
 
-  const parentCrumbElems: React.ReactNodeArray = [];
-  parentCrumbs.forEach((crumb, i) => {
-    parentCrumbElems.push(<Box key={i}>{crumb}</Box>);
+  const parentCrumbElems: React.ReactNode[] = [];
+  parentCrumbs.forEach((crumb) => {
+    parentCrumbElems.push(
+      <span key={`parent-${crumb}`}>
+        {crumb}
+        <span className={styles.divider}> / </span>
+      </span>,
+    );
   });
 
-  const pathCrumbElems: React.ReactNodeArray = [];
+  const pathCrumbElems: React.ReactNode[] = [];
   pathCrumbs.forEach((crumb, i) => {
-    if (pathCrumbs[i + 1]) {
-      pathCrumbElems.push(<Box key={i}>{crumb}</Box>);
+    const next = pathCrumbs[i + 1];
+    const key = `crumb-${crumb}-${i}`;
+    if (next) {
+      pathCrumbElems.push(
+        <span key={key}>
+          {crumb}
+          <span className={styles.divider}> / </span>
+        </span>,
+      );
     } else {
       pathCrumbElems.push(
-        <Box key={i} color="body" fontWeight="semibold">
+        <span key={key} className={styles.active}>
           {crumb}
-        </Box>,
+        </span>,
       );
     }
   });
@@ -38,26 +50,9 @@ export const PathCrumbs = ({ parentCrumbs = [] }: { parentCrumbs?: string[] }) =
   }
 
   return (
-    <HStack
-      spacing={1}
-      divider={<Box>/</Box>}
-      h="md"
-      // so that the crumbs take up no space in the dom, and thus do not push content down when they appear
-      mt={-8}
-      borderB
-      pos="sticky"
-      top={0}
-      fontFamily="mono"
-      fontSize="sm"
-      lineHeight="none"
-      zIndex={10}
-      bg="canvas-pure"
-      px="px"
-      color="light"
-      alignItems="center"
-    >
+    <div className={styles.crumbs}>
       {parentCrumbElems}
-      {pathCrumbElems.length && <HStack divider={<Box fontWeight="bold">.</Box>}>{pathCrumbElems}</HStack>}
-    </HStack>
+      {pathCrumbElems}
+    </div>
   );
 };

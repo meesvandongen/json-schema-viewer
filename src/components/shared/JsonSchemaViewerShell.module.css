@@ -1,0 +1,27 @@
+.viewer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  color: var(--jsv-text);
+  display: grid;
+  /* Dynamic indicator column width */
+  --actual-indicators-width: var(--jsv-internal-tree-indicators-width);
+  /* Dynamic grid: indicator column + flexible content */
+  grid-template-columns: var(--actual-indicators-width) 1fr;
+}
+
+/* No indicator column when no rows have change indicators */
+.viewer:not(:has([data-change-type])) {
+  --actual-indicators-width: 0px;
+  grid-template-columns: 0px 1fr;
+}
+
+.viewer > * {
+  grid-column: 1 / -1; /* All direct children span both columns by default */
+}
+
+.empty {
+  font-size: var(--jsv-font-size-base);
+  color: var(--jsv-muted);
+}

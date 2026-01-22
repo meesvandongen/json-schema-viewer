@@ -1,0 +1,51 @@
+.validationsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jsv-gap-xs);
+  color: var(--jsv-muted);
+  font-size: var(--jsv-font-size-validation);
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.validationRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--jsv-gap-sm);
+  color: var(--jsv-muted);
+}
+
+.validationRow > span:first-child {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.values {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--jsv-gap-xs);
+  max-width: 100%;
+}
+
+.value {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px;
+  border-radius: var(--jsv-radius-sm);
+  background: transparent;
+  border: 1px solid var(--jsv-border);
+  color: var(--jsv-muted);
+  font-size: var(--jsv-font-size-validation);
+  line-height: 1.4;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.numberRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--jsv-gap-xs);
+  color: var(--jsv-muted);
+}

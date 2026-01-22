@@ -8,9 +8,7 @@
         "properties": {
           "foo": {
             "type": "string",
-            "enum": [
-              "test"
-            ]
+            "enum": ["test"]
           }
         }
       },

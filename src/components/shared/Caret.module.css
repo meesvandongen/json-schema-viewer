@@ -1,0 +1,35 @@
+.caret {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--jsv-internal-tree-chevron-size);
+  height: var(--jsv-internal-tree-chevron-size);
+  color: var(--jsv-muted);
+  pointer-events: none;
+  flex-shrink: 0;
+  position: absolute;
+  /* Position so chevron ends just before text starts */
+  /* Text starts at nesting-offset, chevron is 24px wide, so left = offset - 24px */
+  left: calc(var(--nesting-offset, 0px) - var(--jsv-internal-tree-chevron-size));
+  /* Align with title text center - use same calculation as horizontal tree line */
+  top: calc(var(--jsv-font-size-title) * var(--jsv-line-height) / 2);
+  transform: translateY(-50%);
+  margin-top: 0;
+  z-index: 1;
+}
+
+.chevron {
+  width: 10px;
+  height: 10px;
+  fill: currentColor;
+  transform-origin: center;
+  transition: transform 120ms ease;
+}
+
+.expanded .chevron {
+  transform: rotate(90deg);
+}
+
+.expanded .chevron {
+  transform: rotate(90deg);
+}

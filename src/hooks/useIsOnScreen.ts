@@ -1,6 +1,6 @@
-import { RefObject, useEffect, useState } from 'react';
+import { type RefObject, useEffect, useState } from "react";
 
-export const useIsOnScreen = (ref: RefObject<HTMLElement>) => {
+export const useIsOnScreen = (ref: RefObject<HTMLElement | null>) => {
   const [isOnScreen, setIsOnScreen] = useState(true);
 
   useEffect(() => {
@@ -10,11 +10,13 @@ export const useIsOnScreen = (ref: RefObject<HTMLElement>) => {
       const scrollParent = getScrollParent(ref.current);
       observer = new IntersectionObserver(
         ([entry]) => {
-          setIsOnScreen(entry.isIntersecting);
+          if (entry) {
+            setIsOnScreen(entry.isIntersecting);
+          }
         },
         {
           root: scrollParent === window ? undefined : (scrollParent as HTMLElement),
-          rootMargin: '20px 0px 0px 0px',
+          rootMargin: "20px 0px 0px 0px",
         },
       );
 
@@ -35,7 +37,7 @@ function getScrollParent(node: HTMLElement | null): HTMLElement | typeof window 
   }
 
   if (node.scrollHeight > node.clientHeight && node.clientHeight > 0) {
-    return node.tagName === 'HTML' ? window : node;
+    return node.tagName === "HTML" ? window : node;
   } else {
     return getScrollParent(node.parentElement);
   }

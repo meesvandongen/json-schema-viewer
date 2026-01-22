@@ -1,0 +1,20 @@
+.types {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jsv-gap-xs);
+  color: var(--jsv-muted);
+  font-size: var(--jsv-font-size-type);
+  font-family: var(--jsv-font-mono);
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.muted {
+  color: var(--jsv-muted);
+}
+
+.text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
