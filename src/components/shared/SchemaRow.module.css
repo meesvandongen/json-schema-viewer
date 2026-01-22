@@ -1,0 +1,204 @@
+/* Internal tree structure variables - not meant to be customized */
+:root {
+  --jsv-internal-tree-nesting-offset: 24px;              /* Total horizontal space per level */
+  --jsv-internal-tree-branch-length: 12px;               /* Normal branch length */
+  --jsv-internal-tree-branch-length-with-chevron: 4px;   /* Short branch with chevron */
+  --jsv-internal-tree-gap-after-branch: 12px;            /* Gap between branch and text */
+  --jsv-internal-tree-chevron-size: 24px;                /* Chevron container size */
+  --jsv-internal-tree-line-width: 1px;                   /* Width of tree lines */
+  --jsv-internal-tree-indicators-width: 28px;            /* Left indicators column width */
+  --jsv-internal-tree-breaking-icon-size: 20px;          /* Breaking change icon size */
+  --jsv-internal-tree-change-bar-left: 24px;             /* Change bar position */
+  --jsv-internal-tree-change-bar-width: 6px;             /* Change bar width */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1; /* Span all parent grid columns */
+  align-items: flex-start;
+  gap: 0;
+  padding: var(--jsv-gap-sm) 0;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Indicators column - contains breaking icon and change bar */
+.indicators {
+  position: relative;
+  width: 100%; /* Fill the grid column (which is dynamic at viewer level) */
+  height: 100%;
+  flex-shrink: 0;
+}
+
+/* Breaking change icon */
+.breakingIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--jsv-internal-tree-breaking-icon-size);
+  height: var(--jsv-internal-tree-breaking-icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--jsv-danger);
+  color: white;
+  border-radius: 50%;
+  font-size: var(--jsv-font-size-title);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Change indicator bar */
+.changeBar {
+  position: absolute;
+  left: var(--jsv-internal-tree-change-bar-left);
+  top: calc(-1 * var(--jsv-gap-sm) + 1px);
+  bottom: calc(-1 * var(--jsv-gap-sm) + 1px);
+  width: var(--jsv-internal-tree-change-bar-width);
+  background: transparent;
+  cursor: default;
+  border-radius: 2px;
+}
+
+/* Change type colors for the bar */
+.row[data-change-type="added"] .changeBar {
+  background: var(--jsv-change-added);
+}
+
+.row[data-change-type="removed"] .changeBar {
+  background: var(--jsv-change-removed);
+}
+
+.row[data-change-type="modified"] .changeBar {
+  background: var(--jsv-change-modified);
+}
+
+/* Content always starts after the indicators column */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jsv-gap-xs);
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  position: relative;
+  /* Calculated nesting offset using nesting level variable */
+  /* For root items: just base chevron size */
+  /* For nested items: base + (levels beyond root × offset per level) */
+  --nesting-offset: calc(
+    var(--jsv-internal-tree-chevron-size) + 
+    max(0, var(--nesting-level, 0) - var(--root-level, 1)) * var(--jsv-internal-tree-nesting-offset)
+  );
+  /* Padding calculated as: base chevron size + (nesting levels beyond root × nesting offset per level) */
+  padding-left: var(--nesting-offset);
+}
+
+/* Horizontal tree line connecting to each nested row */
+.row[data-nested="true"] .content::before {
+  content: '';
+  position: absolute;
+  /* Start at vertical line position: current offset - total nesting offset */
+  left: calc(var(--nesting-offset, 0px) - var(--jsv-internal-tree-nesting-offset));
+  /* Align with middle of title text */
+  top: calc(var(--jsv-font-size-title) * var(--jsv-line-height) / 2);
+  /* Branch length: ends gap-after-branch before text */
+  width: var(--jsv-internal-tree-branch-length);
+  height: var(--jsv-internal-tree-line-width);
+  background: var(--jsv-border);
+  z-index: 0;
+}
+
+/* Shorter horizontal line when there's a chevron */
+.row[data-nested="true"][data-has-chevron="true"] .content::before {
+  width: var(--jsv-internal-tree-branch-length-with-chevron);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--jsv-gap-sm);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: var(--jsv-font-mono);
+  font-weight: 600;
+  margin-right: var(--jsv-gap-sm);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--jsv-gap-sm);
+  font-size: var(--jsv-font-size-title);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  /* Extend to cover chevron area */
+  margin-left: calc(-1 * var(--jsv-internal-tree-chevron-size));
+  padding-left: var(--jsv-internal-tree-chevron-size);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  min-width: 0;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+
+.inline select {
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+  background: var(--jsv-surface-raised);
+  border: 1px solid var(--jsv-border);
+  border-radius: var(--jsv-radius-sm);
+  padding: 2px 6px;
+}
+
+.pillLink {
+  color: var(--jsv-accent);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+.divider {
+  flex: 1;
+  height: 1px;
+  background: var(--jsv-border);
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.row:hover .divider {
+  opacity: 0.7;
+}
+
+.description {
+  color: var(--jsv-muted);
+  font-size: var(--jsv-font-size-description);
+}
+
+.vendor {
+  margin-top: var(--jsv-gap-sm);
+}
