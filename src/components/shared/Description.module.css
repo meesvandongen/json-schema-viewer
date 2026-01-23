@@ -5,6 +5,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+  grid-column: 1 / -1; /* Span all columns when in grid context */
 }
 
 .description p {

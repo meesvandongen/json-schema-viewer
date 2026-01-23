@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
     "AllOfMergeObjects": {
@@ -68,7 +69,9 @@
     },
     "AllOfMergeRefs": {
       "allOf": [
-        { "$ref": "#/definitions/ref1" },
+        {
+          "$ref": "#/definitions/ref1"
+        },
         {
           "type": "object",
           "properties": {
@@ -80,7 +83,6 @@
       ]
     }
   },
-
   "definitions": {
     "ref1": {
       "type": "object",
@@ -95,7 +97,11 @@
           "type": "string"
         }
       },
-      "required": ["street_address", "city", "state"]
+      "required": [
+        "street_address",
+        "city",
+        "state"
+      ]
     },
     "ref2": {
       "type": "object",

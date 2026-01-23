@@ -10,11 +10,12 @@ import { useIsOnScreen } from "../../hooks/useIsOnScreen";
 import { isComplexArray, isDictionaryNode, visibleChildren } from "../../tree";
 import { extractVendorExtensions } from "../../utils/extractVendorExtensions";
 import { showPathCrumbsAtom } from "../PathCrumbs/state";
-import { Description, getValidationsFromSchema, Validations } from "../shared";
+import { Description, getValidationsFromSchema, Validations, Error as ErrorIndicator } from "../shared";
 import { ChildStack } from "../shared/ChildStack";
 import { SchemaRow, type SchemaRowProps } from "./SchemaRow";
 import { useChoices } from "./useChoices";
 import topStyles from "../shared/TopLevelSchemaRow.module.css";
+import { Dropdown } from "../shared/Dropdown";
 
 export const TopLevelSchemaRow = ({
   schemaNode,
@@ -48,9 +49,9 @@ export const TopLevelSchemaRow = ({
       <div className={topStyles.container}>
         <ScrollCheck />
         {!skipDescription ? <Description value={schemaNode.annotations.description} /> : null}
-        {hasVendorProperties && renderExtensionAddon
-          ? renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions })
-          : null}
+        {/* Show top-level internal schema error if present */}
+        <ErrorIndicator schemaNode={schemaNode} />
+        {hasVendorProperties && renderExtensionAddon ? renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions }) : null}
         <ChildStack
           schemaNode={schemaNode}
           childNodes={childNodes}
@@ -73,11 +74,11 @@ export const TopLevelSchemaRow = ({
         )}
         {selectedChoice && (
           <div className={topStyles.choiceBar}>
-            <select
+            <Dropdown
               aria-label="Pick a type"
               value={String(choices.indexOf(selectedChoice))}
-              onChange={(event) => {
-                const choice = choices[Number(event.target.value)];
+              onChange={(val: string) => {
+                const choice = choices[Number(val)];
                 if (choice) {
                   setSelectedChoice(choice);
                 }
@@ -88,7 +89,7 @@ export const TopLevelSchemaRow = ({
                   {choice.title}
                 </option>
               ))}
-            </select>
+            </Dropdown>
 
             {combiner && combiner in COMBINER_NAME_MAP ? (
               <div className={topStyles.combiner}>{`(${COMBINER_NAME_MAP[combiner]})`}</div>
@@ -116,9 +117,10 @@ export const TopLevelSchemaRow = ({
         <ScrollCheck />
         <Description value={schemaNode.annotations.description} />
 
-        <div className={topStyles.arrayLabel}>array of:</div>
-
-        {!isEmpty(validations) && <Validations validations={validations} />}
+        <div className={topStyles.arrayHeader}>
+          <div className={topStyles.arrayLabel}>array of:</div>
+          {!isEmpty(validations) && <Validations validations={validations} />}
+        </div>
 
         {childNodes.length > 0 ? (
           <ChildStack

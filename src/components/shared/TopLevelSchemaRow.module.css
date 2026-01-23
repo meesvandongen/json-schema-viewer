@@ -6,10 +6,11 @@
   display: inline-flex;
   align-items: center;
   gap: var(--jsv-gap-sm);
-  padding: var(--jsv-gap-sm) var(--jsv-gap-md);
-  background: var(--jsv-surface-raised);
-  border: 1px solid var(--jsv-border);
-  border-radius: var(--jsv-radius-md);
+  grid-column: 1 / -1; /* Span all columns */
+}
+
+.choiceBar select {
+  /* Styles moved to shared Dropdown.module.css; keep selector present for legacy targets */
 }
 
 .choiceTrigger {
@@ -25,6 +26,13 @@
 .combiner {
   color: var(--jsv-muted);
   font-size: var(--jsv-font-size-description);
+}
+
+.arrayHeader {
+  grid-column: 1 / -1; /* Span all columns */
+  display: flex;
+  flex-direction: column;
+  gap: var(--jsv-gap-xs);
 }
 
 .arrayLabel {

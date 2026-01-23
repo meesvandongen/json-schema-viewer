@@ -1,0 +1,9 @@
+.select {
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+  background: var(--jsv-surface-raised);
+  border: 1px solid var(--jsv-border);
+  border-radius: var(--jsv-radius-sm);
+  padding: 2px 6px;
+}

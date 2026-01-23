@@ -225,7 +225,7 @@ describe("HTML Output", () => {
             />
             <div
               class="_content_9d8035"
-              style="padding-left: 0px; --nesting-offset: 0px;"
+              style="--nesting-level: 0; --root-level: 1;"
             >
               <div
                 class="_header_9d8035"
@@ -306,7 +306,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 0; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -358,7 +358,7 @@ describe("HTML Output", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -480,7 +480,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 0; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -528,7 +528,7 @@ describe("HTML Output", () => {
                   <div
                     class="_stack_577e6e _root_577e6e "
                     data-level="0"
-                    style="--parent-nesting-offset: 0px;"
+                    style="--parent-nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       aria-label="Schema row"
@@ -544,7 +544,7 @@ describe("HTML Output", () => {
                       />
                       <div
                         class="_content_9d8035"
-                        style="padding-left: 0px; --nesting-offset: 0px;"
+                        style="--nesting-level: 1; --root-level: 1;"
                       >
                         <div
                           class="_header_9d8035"
@@ -597,7 +597,7 @@ describe("HTML Output", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -645,7 +645,7 @@ describe("HTML Output", () => {
                 <div
                   class="_stack_577e6e _root_577e6e "
                   data-level="0"
-                  style="--parent-nesting-offset: 0px;"
+                  style="--parent-nesting-level: 0; --root-level: 1;"
                 >
                   <div
                     aria-label="Schema row"
@@ -661,7 +661,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 1; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -784,7 +784,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 0; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -832,7 +832,7 @@ describe("HTML Output", () => {
                   <div
                     class="_stack_577e6e _root_577e6e "
                     data-level="0"
-                    style="--parent-nesting-offset: 0px;"
+                    style="--parent-nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       aria-label="Schema row"
@@ -848,7 +848,7 @@ describe("HTML Output", () => {
                       />
                       <div
                         class="_content_9d8035"
-                        style="padding-left: 0px; --nesting-offset: 0px;"
+                        style="--nesting-level: 1; --root-level: 1;"
                       >
                         <div
                           class="_header_9d8035"
@@ -901,7 +901,7 @@ describe("HTML Output", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -949,7 +949,7 @@ describe("HTML Output", () => {
                 <div
                   class="_stack_577e6e _root_577e6e "
                   data-level="0"
-                  style="--parent-nesting-offset: 0px;"
+                  style="--parent-nesting-level: 0; --root-level: 1;"
                 >
                   <div
                     aria-label="Schema row"
@@ -965,7 +965,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 1; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -1082,7 +1082,7 @@ describe("HTML Output", () => {
           <div
             class="_stack_577e6e _root_577e6e "
             data-level="0"
-            style="--parent-nesting-offset: 0px;"
+            style="--parent-nesting-level: 0; --root-level: 1;"
           >
             <div
               aria-label="Schema row"
@@ -1098,7 +1098,7 @@ describe("HTML Output", () => {
               />
               <div
                 class="_content_9d8035"
-                style="padding-left: 0px; --nesting-offset: 0px;"
+                style="--nesting-level: 1; --root-level: 1;"
               >
                 <div
                   class="_header_9d8035"
@@ -1176,7 +1176,7 @@ describe("HTML Output", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 0; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -1228,7 +1228,7 @@ describe("HTML Output", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1408,14 +1408,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -1431,7 +1435,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1503,14 +1507,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -1526,7 +1534,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1598,14 +1606,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -1621,7 +1633,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1675,7 +1687,7 @@ describe("Expanded depth", () => {
                 <div
                   class="_stack_577e6e  "
                   data-level="1"
-                  style="--parent-nesting-offset: 24px;"
+                  style="--parent-nesting-level: 1; --root-level: 1;"
                 >
                   <div
                     aria-label="Schema row"
@@ -1691,7 +1703,7 @@ describe("Expanded depth", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 48px; --nesting-offset: 48px;"
+                      style="--nesting-level: 2; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -1798,14 +1810,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -1821,7 +1837,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1864,7 +1880,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -1936,14 +1952,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -1959,7 +1979,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2002,7 +2022,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2074,14 +2094,18 @@ describe("Expanded depth", () => {
             >
               <div />
               <div
-                class="_arrayLabel_e31247"
+                class="_arrayHeader_e31247"
               >
-                array of:
+                <div
+                  class="_arrayLabel_e31247"
+                >
+                  array of:
+                </div>
               </div>
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -2097,7 +2121,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2140,7 +2164,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2194,7 +2218,7 @@ describe("Expanded depth", () => {
                 <div
                   class="_stack_577e6e  "
                   data-level="1"
-                  style="--parent-nesting-offset: 24px;"
+                  style="--parent-nesting-level: 1; --root-level: 1;"
                 >
                   <div
                     aria-label="Schema row"
@@ -2210,7 +2234,7 @@ describe("Expanded depth", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 48px; --nesting-offset: 48px;"
+                      style="--nesting-level: 2; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -2253,7 +2277,7 @@ describe("Expanded depth", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 48px; --nesting-offset: 48px;"
+                      style="--nesting-level: 2; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -2353,7 +2377,7 @@ describe("Expanded depth", () => {
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -2369,7 +2393,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2434,7 +2458,7 @@ describe("Expanded depth", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2552,7 +2576,7 @@ describe("$ref resolving", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2604,7 +2628,7 @@ describe("$ref resolving", () => {
                 />
                 <div
                   class="_content_9d8035"
-                  style="padding-left: 0px; --nesting-offset: 0px;"
+                  style="--nesting-level: 0; --root-level: 1;"
                 >
                   <div
                     class="_header_9d8035"
@@ -2722,7 +2746,7 @@ describe("$ref resolving", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 0; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"
@@ -2793,7 +2817,7 @@ describe("$ref resolving", () => {
                 <div
                   class="_stack_577e6e _root_577e6e "
                   data-level="0"
-                  style="--parent-nesting-offset: 0px;"
+                  style="--parent-nesting-level: 0; --root-level: 1;"
                 >
                   <div
                     aria-label="Schema row"
@@ -2809,7 +2833,7 @@ describe("$ref resolving", () => {
                     />
                     <div
                       class="_content_9d8035"
-                      style="padding-left: 0px; --nesting-offset: 0px;"
+                      style="--nesting-level: 1; --root-level: 1;"
                     >
                       <div
                         class="_header_9d8035"
@@ -2885,7 +2909,7 @@ describe("$ref resolving", () => {
                 />
                 <div
                   class="_content_9d8035"
-                  style="padding-left: 0px; --nesting-offset: 0px;"
+                  style="--nesting-level: 0; --root-level: 1;"
                 >
                   <div
                     class="_header_9d8035"
@@ -2956,7 +2980,7 @@ describe("$ref resolving", () => {
               <div
                 class="_stack_577e6e _root_577e6e "
                 data-level="0"
-                style="--parent-nesting-offset: 0px;"
+                style="--parent-nesting-level: 0; --root-level: 1;"
               >
                 <div
                   aria-label="Schema row"
@@ -2972,7 +2996,7 @@ describe("$ref resolving", () => {
                   />
                   <div
                     class="_content_9d8035"
-                    style="padding-left: 0px; --nesting-offset: 0px;"
+                    style="--nesting-level: 1; --root-level: 1;"
                   >
                     <div
                       class="_header_9d8035"

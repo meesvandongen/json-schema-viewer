@@ -15,6 +15,7 @@ import { getNodeId, getOriginalNodeId } from "../../hash";
 import { isPropertyRequired, visibleChildren } from "../../tree";
 import { extractVendorExtensions } from "../../utils/extractVendorExtensions";
 import { Caret, Description, getValidationsFromSchema, Types, Validations } from "../shared";
+import { Dropdown } from "../shared/Dropdown";
 import { ChildStack } from "../shared/ChildStack";
 import { Properties, useHasProperties } from "../shared/Properties";
 import styles from "../shared/SchemaRow.module.css";
@@ -178,13 +179,13 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
                 ) : null}
 
                 {choices.length > 1 && selectedChoice && (
-                  <select
+                  <Dropdown
                     aria-label="Pick a type"
                     value={String(choices.indexOf(selectedChoice))}
                     onClick={(e) => e.stopPropagation()}
                     onKeyDown={(e) => e.stopPropagation()}
-                    onChange={(event) => {
-                      const choice = choices[Number(event.target.value)];
+                    onChange={(val) => {
+                      const choice = choices[Number(val)];
                       if (choice) {
                         setSelectedChoice(choice);
                       }
@@ -196,7 +197,7 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
                         {choice.title}
                       </option>
                     ))}
-                  </select>
+                  </Dropdown>
                 )}
               </button>
               {hasProperties && <div className={styles.divider} aria-hidden />}
@@ -215,7 +216,7 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
               </div>
             ) : null}
           </div>
-          {renderRowAddon ? <div>{renderRowAddon({ schemaNode, nestingLevel })}</div> : null}
+          {renderRowAddon ? <div className={styles.addon}>{renderRowAddon({ schemaNode, nestingLevel })}</div> : null}
         </div>
         {isCollapsible && isExpanded ? (
           <ChildStack

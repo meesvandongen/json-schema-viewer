@@ -14,7 +14,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 0,
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -30,7 +30,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 0,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -95,7 +95,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 0,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -165,7 +165,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -181,7 +181,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -235,7 +235,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
       <div
         class="_stack_577e6e  "
         data-level="1"
-        style="--parent-nesting-offset: 24px;"
+        style="--parent-nesting-level: 1; --root-level: 1;"
       >
         <div
           aria-label="Schema row"
@@ -251,7 +251,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -316,7 +316,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -359,7 +359,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -403,7 +403,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -457,7 +457,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
       <div
         class="_stack_577e6e  "
         data-level="1"
-        style="--parent-nesting-offset: 24px;"
+        style="--parent-nesting-level: 1; --root-level: 1;"
       >
         <div
           aria-label="Schema row"
@@ -473,7 +473,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -516,7 +516,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 1,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -565,7 +565,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -581,7 +581,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -635,7 +635,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
       <div
         class="_stack_577e6e  "
         data-level="1"
-        style="--parent-nesting-offset: 24px;"
+        style="--parent-nesting-level: 1; --root-level: 1;"
       >
         <div
           aria-label="Schema row"
@@ -651,7 +651,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -705,7 +705,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
         <div
           class="_stack_577e6e  "
           data-level="2"
-          style="--parent-nesting-offset: 48px;"
+          style="--parent-nesting-level: 2; --root-level: 1;"
         >
           <div
             aria-label="Schema row"
@@ -721,7 +721,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
             />
             <div
               class="_content_9d8035"
-              style="padding-left: 72px; --nesting-offset: 72px;"
+              style="--nesting-level: 3; --root-level: 1;"
             >
               <div
                 class="_header_9d8035"
@@ -765,7 +765,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -808,7 +808,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -852,7 +852,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -906,7 +906,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
       <div
         class="_stack_577e6e  "
         data-level="1"
-        style="--parent-nesting-offset: 24px;"
+        style="--parent-nesting-level: 1; --root-level: 1;"
       >
         <div
           aria-label="Schema row"
@@ -922,7 +922,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -965,7 +965,7 @@ exports[`Expanded depth > nested object > static > given initial level set to 2,
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -1037,7 +1037,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -1053,7 +1053,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1135,7 +1135,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1186,7 +1186,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1229,7 +1229,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1272,7 +1272,7 @@ exports[`HTML Output > given anyOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1354,7 +1354,7 @@ exports[`HTML Output > given array with oneOf containing items, should merge it 
       />
       <div
         class="_content_9d8035"
-        style="padding-left: 0px; --nesting-offset: 0px;"
+        style="--nesting-level: 0; --root-level: 1;"
       >
         <div
           class="_header_9d8035"
@@ -1395,7 +1395,7 @@ exports[`HTML Output > given complex type that includes array and complex array 
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -1411,7 +1411,7 @@ exports[`HTML Output > given complex type that includes array and complex array 
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1493,7 +1493,7 @@ exports[`HTML Output > given multiple object and string type, should process pro
       />
       <div
         class="_content_9d8035"
-        style="padding-left: 0px; --nesting-offset: 0px;"
+        style="--nesting-level: 0; --root-level: 1;"
       >
         <div
           class="_header_9d8035"
@@ -1556,7 +1556,7 @@ exports[`HTML Output > given multiple object and string type, should process pro
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -1572,7 +1572,7 @@ exports[`HTML Output > given multiple object and string type, should process pro
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1643,7 +1643,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -1659,7 +1659,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1741,7 +1741,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1792,7 +1792,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1835,7 +1835,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1878,7 +1878,7 @@ exports[`HTML Output > given oneOf combiner placed next to allOf > given allOf m
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -1937,7 +1937,7 @@ exports[`HTML Output > given read mode, should populate proper nodes 1`] = `
       />
       <div
         class="_content_9d8035"
-        style="padding-left: 0px; --nesting-offset: 0px;"
+        style="--nesting-level: 0; --root-level: 1;"
       >
         <div
           class="_header_9d8035"
@@ -2000,7 +2000,7 @@ exports[`HTML Output > given read mode, should populate proper nodes 1`] = `
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2016,7 +2016,7 @@ exports[`HTML Output > given read mode, should populate proper nodes 1`] = `
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2075,7 +2075,7 @@ exports[`HTML Output > given standalone mode, should populate proper nodes 1`] =
       />
       <div
         class="_content_9d8035"
-        style="padding-left: 0px; --nesting-offset: 0px;"
+        style="--nesting-level: 0; --root-level: 1;"
       >
         <div
           class="_header_9d8035"
@@ -2138,7 +2138,7 @@ exports[`HTML Output > given standalone mode, should populate proper nodes 1`] =
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2154,7 +2154,7 @@ exports[`HTML Output > given standalone mode, should populate proper nodes 1`] =
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2209,7 +2209,7 @@ exports[`HTML Output > given standalone mode, should populate proper nodes 1`] =
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2269,7 +2269,7 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2285,7 +2285,7 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2339,7 +2339,7 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
       <div
         class="_stack_577e6e  "
         data-level="1"
-        style="--parent-nesting-offset: 24px;"
+        style="--parent-nesting-level: 1; --root-level: 1;"
       >
         <div
           aria-label="Schema row"
@@ -2355,7 +2355,7 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 48px; --nesting-offset: 48px;"
+            style="--nesting-level: 2; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -2399,7 +2399,7 @@ exports[`HTML Output > given visible $ref node, should try to inject the title i
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2480,7 +2480,7 @@ exports[`HTML Output > given write mode, should populate proper nodes 1`] = `
       />
       <div
         class="_content_9d8035"
-        style="padding-left: 0px; --nesting-offset: 0px;"
+        style="--nesting-level: 0; --root-level: 1;"
       >
         <div
           class="_header_9d8035"
@@ -2543,7 +2543,7 @@ exports[`HTML Output > given write mode, should populate proper nodes 1`] = `
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2559,7 +2559,7 @@ exports[`HTML Output > given write mode, should populate proper nodes 1`] = `
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2607,7 +2607,7 @@ exports[`HTML Output > top level descriptions > should not render top-level desc
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2623,7 +2623,7 @@ exports[`HTML Output > top level descriptions > should not render top-level desc
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2666,7 +2666,7 @@ exports[`HTML Output > top level descriptions > should not render top-level desc
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2722,7 +2722,7 @@ exports[`HTML Output > top level descriptions > should render top-level descript
     <div
       class="_stack_577e6e _root_577e6e "
       data-level="0"
-      style="--parent-nesting-offset: 0px;"
+      style="--parent-nesting-level: 0; --root-level: 1;"
     >
       <div
         aria-label="Schema row"
@@ -2738,7 +2738,7 @@ exports[`HTML Output > top level descriptions > should render top-level descript
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"
@@ -2781,7 +2781,7 @@ exports[`HTML Output > top level descriptions > should render top-level descript
         />
         <div
           class="_content_9d8035"
-          style="padding-left: 0px; --nesting-offset: 0px;"
+          style="--nesting-level: 1; --root-level: 1;"
         >
           <div
             class="_header_9d8035"

@@ -7,14 +7,14 @@
   display: grid;
   /* Dynamic indicator column width */
   --actual-indicators-width: var(--jsv-internal-tree-indicators-width);
-  /* Dynamic grid: indicator column + flexible content */
-  grid-template-columns: var(--actual-indicators-width) 1fr;
+  /* Dynamic grid: indicator column + flexible content + addon column */
+  grid-template-columns: var(--actual-indicators-width) 1fr auto;
 }
 
 /* No indicator column when no rows have change indicators */
 .viewer:not(:has([data-change-type])) {
   --actual-indicators-width: 0px;
-  grid-template-columns: 0px 1fr;
+  grid-template-columns: 0px 1fr auto;
 }
 
 .viewer > * {

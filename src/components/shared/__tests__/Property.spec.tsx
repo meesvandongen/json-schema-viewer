@@ -168,7 +168,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -231,7 +231,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -293,7 +293,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -358,7 +358,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -427,7 +427,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -528,7 +528,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -583,7 +583,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"
@@ -649,7 +649,7 @@ describe("Property component", () => {
           />
           <div
             class="_content_9d8035"
-            style="padding-left: 0px; --nesting-offset: 0px;"
+            style="--nesting-level: 0; --root-level: 1;"
           >
             <div
               class="_header_9d8035"

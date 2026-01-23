@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { JSONSchema4 } from "json-schema";
-import React from "react";
+import { JSONSchema7 } from "json-schema";
 
 import "../styles/bundle.css";
 
@@ -23,15 +22,15 @@ export default meta;
 type Story = StoryObj<typeof JsonSchemaViewer>;
 
 export const SimpleAllOf: Story = {
-  args: { schema: allOfSchema as JSONSchema4 },
+  args: { schema: allOfSchema as JSONSchema7 },
 };
 
 export const CircularAllOf: Story = {
-  args: { schema: allOfComplexSchema as JSONSchema4 },
+  args: { schema: allOfComplexSchema as JSONSchema7 },
 };
 
 export const ArrayOneOf: Story = {
-  args: { schema: oneOfWithArraySchema as JSONSchema4, renderRootTreeLines: true },
+  args: { schema: oneOfWithArraySchema as JSONSchema7, renderRootTreeLines: true },
 };
 
 export const OneOfMulti: Story = {
@@ -39,9 +38,9 @@ export const OneOfMulti: Story = {
 };
 
 export const ArrayOneOf2: Story = {
-  args: { schema: oneOfWithArraySchema2 as JSONSchema4, renderRootTreeLines: true },
+  args: { schema: oneOfWithArraySchema2 as JSONSchema7, renderRootTreeLines: true },
 };
 
 export const ObjectAnyOf: Story = {
-  args: { schema: anyOfObject as JSONSchema4 },
+  args: { schema: anyOfObject as JSONSchema7 },
 };

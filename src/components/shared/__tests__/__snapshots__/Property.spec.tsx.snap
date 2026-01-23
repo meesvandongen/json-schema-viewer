@@ -15,7 +15,7 @@ exports[`Property component > format > given 'array-of-integers' property, shoul
   />
   <div
     class="_content_9d8035"
-    style="padding-left: 0px; --nesting-offset: 0px;"
+    style="--nesting-level: 0; --root-level: 1;"
   >
     <div
       class="_header_9d8035"
@@ -61,7 +61,7 @@ exports[`Property component > format > given 'count' property, should render nex
   />
   <div
     class="_content_9d8035"
-    style="padding-left: 0px; --nesting-offset: 0px;"
+    style="--nesting-level: 0; --root-level: 1;"
   >
     <div
       class="_header_9d8035"
@@ -122,7 +122,7 @@ exports[`Property component > format > given 'date-of-birth' property, should re
   />
   <div
     class="_content_9d8035"
-    style="padding-left: 0px; --nesting-offset: 0px;"
+    style="--nesting-level: 0; --root-level: 1;"
   >
     <div
       class="_header_9d8035"
@@ -194,7 +194,7 @@ exports[`Property component > format > given 'map-of-ids' property, should rende
   />
   <div
     class="_content_9d8035"
-    style="padding-left: 0px; --nesting-offset: 0px;"
+    style="--nesting-level: 0; --root-level: 1;"
   >
     <div
       class="_header_9d8035"
@@ -240,7 +240,7 @@ exports[`Property component > format > given 'size' property, should render next
   />
   <div
     class="_content_9d8035"
-    style="padding-left: 0px; --nesting-offset: 0px;"
+    style="--nesting-level: 0; --root-level: 1;"
   >
     <div
       class="_header_9d8035"

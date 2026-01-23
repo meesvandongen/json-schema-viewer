@@ -133,6 +133,13 @@
   flex-wrap: wrap;
 }
 
+.addon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: var(--jsv-gap-sm);
+}
+
 .name {
   font-family: var(--jsv-font-mono);
   font-weight: 600;
@@ -162,13 +169,8 @@
 }
 
 .inline select {
-  cursor: pointer;
-  font-size: inherit;
-  color: inherit;
-  background: var(--jsv-surface-raised);
-  border: 1px solid var(--jsv-border);
-  border-radius: var(--jsv-radius-sm);
-  padding: 2px 6px;
+  /* keep selector for backward compatibility; visual styles live in Dropdown.module.css */
+  all: unset;
 }
 
 .pillLink {
