@@ -39,14 +39,14 @@ export default meta;
 type Story = StoryObj<typeof JsonSchemaViewer>;
 
 export const SimpleAllOf: Story = {
-  args: { 
+  args: {
     schema: simpleExample as JSONSchema4,
     nodeHasChanged,
   },
 };
 
 export const RootRef: Story = {
-  args: { 
+  args: {
     schema: rootRefExample as JSONSchema4,
     nodeHasChanged,
   },

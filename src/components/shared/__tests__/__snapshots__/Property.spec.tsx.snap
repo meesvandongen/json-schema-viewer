@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Property component > format > given 'array-of-integers' property, should render next to the appropriate type 'array[integer<int32>]' 1`] = `
+exports[`Property component > format > given array-of-integers property, should render next to the appropriate type array[integer<int32>] 1`] = `
 <div
   aria-label="Schema row"
   class="_row_9d8035"
@@ -46,7 +46,7 @@ exports[`Property component > format > given 'array-of-integers' property, shoul
 </div>
 `;
 
-exports[`Property component > format > given 'count' property, should render next to the appropriate type 'integer<int32> or null' 1`] = `
+exports[`Property component > format > given count property, should render next to the appropriate type integer<int32> or null 1`] = `
 <div
   aria-label="Schema row"
   class="_row_9d8035"
@@ -107,7 +107,7 @@ exports[`Property component > format > given 'count' property, should render nex
 </div>
 `;
 
-exports[`Property component > format > given 'date-of-birth' property, should render next to the appropriate type 'number or string<date-time> or array' 1`] = `
+exports[`Property component > format > given date-of-birth property, should render next to the appropriate type number or string<date-time> or array 1`] = `
 <div
   aria-label="Schema row"
   class="_row_9d8035"
@@ -179,7 +179,7 @@ exports[`Property component > format > given 'date-of-birth' property, should re
 </div>
 `;
 
-exports[`Property component > format > given 'map-of-ids' property, should render next to the appropriate type 'dictionary[string, integer<int32>]' 1`] = `
+exports[`Property component > format > given map-of-ids property, should render next to the appropriate type dictionary[string, integer<int32>] 1`] = `
 <div
   aria-label="Schema row"
   class="_row_9d8035"
@@ -225,7 +225,7 @@ exports[`Property component > format > given 'map-of-ids' property, should rende
 </div>
 `;
 
-exports[`Property component > format > given 'size' property, should render next to the appropriate type 'number<byte> or string' 1`] = `
+exports[`Property component > format > given size property, should render next to the appropriate type number<byte> or string 1`] = `
 <div
   aria-label="Schema row"
   class="_row_9d8035"

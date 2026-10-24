@@ -26,15 +26,15 @@
     "./style.css": "./dist/style.css"
   },
   "scripts": {
-    "build": "rslib build",
+    "build": "vp pack",
     "storybook:build": "storybook build -c .storybook -o docs-auto",
     "storybook": "storybook dev -p 6006 -c .storybook",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
+    "test": "vp test run",
+    "test:watch": "vp test",
+    "fmt": "vp fmt",
+    "fmt:check": "vp fmt --check",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -50,8 +50,6 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@rsbuild/plugin-react": "^1.4.3",
-    "@rslib/core": "^0.19.3",
     "@stoplight/types": "^14.1.1",
     "@storybook/addon-docs": "^10.2.0",
     "@storybook/react-vite": "^10.2.0",
@@ -64,18 +62,18 @@
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
-    "@vitest/coverage-v8": "^4.0.17",
+    "@vitest/coverage-v8": "catalog:",
     "happy-dom": "^20.3.4",
     "json-schema": "^0.4.0",
-    "oxfmt": "^0.26.0",
-    "oxlint": "^1.41.0",
+    "publint": "^0.3.25",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-markdown": "^10.1.0",
     "storybook": "^10.2.0",
     "typescript": "5.9.3",
-    "vite": "^7.3.1",
-    "vitest": "^4.0.17"
+    "vite": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -85,5 +83,5 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "pnpm@10.28.0"
+  "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61"
 }

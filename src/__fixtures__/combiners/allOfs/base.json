@@ -97,11 +97,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "street_address",
-        "city",
-        "state"
-      ]
+      "required": ["street_address", "city", "state"]
     },
     "ref2": {
       "type": "object",

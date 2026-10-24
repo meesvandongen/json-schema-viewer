@@ -51,16 +51,16 @@ export const Expansions: Story = {
 };
 
 export const ArrayOfObjects: Story = {
-  args: { 
-    schema: arrayOfComplexObjects as JSONSchema4, 
-    renderRootTreeLines: true 
+  args: {
+    schema: arrayOfComplexObjects as JSONSchema4,
+    renderRootTreeLines: true,
   },
 };
 
 export const StressTest: Story = {
-  args: { 
-    schema: stressSchema as JSONSchema4, 
-    defaultExpandedDepth: 7 
+  args: {
+    schema: stressSchema as JSONSchema4,
+    defaultExpandedDepth: 7,
   },
 };
 

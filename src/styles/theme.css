@@ -25,7 +25,7 @@
   --jsv-gap-lg: 16px;
   --jsv-font-sans: "DM Sans", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   --jsv-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  
+
   /* Font sizes - semantic naming with size suffix */
   --jsv-font-size-base: 14px;
   --jsv-font-size-title: 12px;
@@ -36,7 +36,7 @@
   --jsv-font-size-breadcrumb: 12px;
   --jsv-font-size-code: 12px;
   --jsv-font-size-tag: 12px;
-  
+
   --jsv-line-height: 1.5;
   --jsv-line-muted: linear-gradient(
     90deg,
@@ -44,8 +44,8 @@
     transparent 100%
   );
   --jsv-change-added: oklch(60% 0.18 145);
-  --jsv-change-removed: oklch(58% 0.20 25);
-  --jsv-change-modified: oklch(75% 0.20 95);
+  --jsv-change-removed: oklch(58% 0.2 25);
+  --jsv-change-modified: oklch(75% 0.2 95);
   color: var(--jsv-text);
   background: transparent;
   font-family: var(--jsv-font-sans);
@@ -71,7 +71,7 @@
   --jsv-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --jsv-change-added: oklch(68% 0.19 145);
   --jsv-change-removed: oklch(66% 0.21 25);
-  --jsv-change-modified: oklch(80% 0.20 95);
+  --jsv-change-modified: oklch(80% 0.2 95);
 }
 
 .json-schema-viewer * {

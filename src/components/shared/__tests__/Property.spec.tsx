@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import type { JSONSchema4, JSONSchema7 } from "json-schema";
 import * as React from "react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vite-plus/test";
 
 import { SchemaRow } from "../..";
 import { buildTree, findNodeWithPath } from "./utils";

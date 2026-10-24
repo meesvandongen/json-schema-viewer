@@ -37,11 +37,19 @@ export const Properties: React.FunctionComponent<IProperties> = ({
   const showVisibilityValidations = viewMode === "standalone" && !!readOnly !== !!writeOnly;
   const visibility = showVisibilityValidations ? (
     readOnly ? (
-      <span className={`${styles.pill} ${styles.muted}`} data-test="property-read-only" title="This property is read-only">
+      <span
+        className={`${styles.pill} ${styles.muted}`}
+        data-test="property-read-only"
+        title="This property is read-only"
+      >
         read-only
       </span>
     ) : (
-      <span className={`${styles.pill} ${styles.muted}`} data-test="property-write-only" title="This property is write-only">
+      <span
+        className={`${styles.pill} ${styles.muted}`}
+        data-test="property-write-only"
+        title="This property is write-only"
+      >
         write-only
       </span>
     )
@@ -50,13 +58,21 @@ export const Properties: React.FunctionComponent<IProperties> = ({
   return (
     <span className={styles.properties}>
       {deprecated ? (
-        <span className={`${styles.pill} ${styles.warning}`} data-test="property-deprecated" title="This property is deprecated and may be removed in future versions">
+        <span
+          className={`${styles.pill} ${styles.warning}`}
+          data-test="property-deprecated"
+          title="This property is deprecated and may be removed in future versions"
+        >
           deprecated
         </span>
       ) : null}
       {visibility}
       {required && (
-        <span className={`${styles.pill} ${styles.warning}`} data-test="property-required" title="This property is required">
+        <span
+          className={`${styles.pill} ${styles.warning}`}
+          data-test="property-required"
+          title="This property is required"
+        >
           required
         </span>
       )}
