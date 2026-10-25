@@ -45,9 +45,9 @@ More examples can be find in the [Storybook stories](./src/__stories__/JsonSchem
 
 1. Clone repo.
 2. Create / checkout `feature/{name}`, `chore/{name}`, or `fix/{name}` branch.
-3. Install deps: `yarn`.
+3. Install deps: `pnpm install` (pnpm is pinned in `packageManager`; run `corepack enable` first).
 4. Make your changes.
-5. Run tests: `yarn test.prod`.
+5. Run checks: `pnpm run fmt:check && pnpm run lint && pnpm run typecheck && pnpm test`.
 6. Stage relevant files to git.
 7. Commit: `yarn commit`. _NOTE: Commits that don't follow the [conventional](https://github.com/marionebl/commitlint/tree/master/%40commitlint/config-conventional) format will be rejected. `yarn commit` creates this format for you, or you can put it together manually and then do a regular `git commit`._
 8. Push: `git push`.

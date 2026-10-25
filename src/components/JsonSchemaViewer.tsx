@@ -4,10 +4,7 @@ import {
   type RootNode,
   type SchemaTreeRefDereferenceFn,
 } from "@stoplight/json-schema-tree";
-import type {
-  ErrorBoundaryForwardedProps,
-  FallbackProps,
-} from "@stoplight/react-error-boundary";
+import type { ErrorBoundaryForwardedProps, FallbackProps } from "@stoplight/react-error-boundary";
 import { withErrorBoundary } from "@stoplight/react-error-boundary";
 import cn from "classnames";
 import { Provider, useSetAtom } from "jotai";
@@ -21,7 +18,7 @@ import { PathCrumbs } from "./PathCrumbs";
 import { TopLevelSchemaRow } from "./SchemaRow";
 import { hoveredNodeAtom } from "./SchemaRow/state";
 import shellStyles from "./shared/JsonSchemaViewerShell.module.css";
-import "../styles/theme.css";
+// viewer.css @imports theme.css; importing theme.css here as well would emit it twice.
 import "../styles/viewer.css";
 
 export type JsonSchemaProps = Partial<JSVOptions> & {

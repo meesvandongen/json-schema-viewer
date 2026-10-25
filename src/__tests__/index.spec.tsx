@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import type { JSONSchema4, JSONSchema7 } from "json-schema";
 import * as React from "react";
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vite-plus/test";
 
 import { JsonSchemaViewer } from "../components";
 import { ViewMode } from "../types";

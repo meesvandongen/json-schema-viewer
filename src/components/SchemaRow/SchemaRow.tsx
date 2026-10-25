@@ -91,7 +91,7 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
         annotationLeftOffset += 27;
       }
     }
-    
+
     // Determine if this row should show tree lines
     const rootLevel = renderRootTreeLines ? 0 : 1;
     const isNested = nestingLevel > rootLevel;
@@ -111,8 +111,8 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
           data-id={originalNodeId}
           data-test="schema-row"
           data-change-type={hasChanged ? hasChanged.type : undefined}
-          data-nested={isNested ? 'true' : 'false'}
-          data-has-chevron={isCollapsible ? 'true' : 'false'}
+          data-nested={isNested ? "true" : "false"}
+          data-has-chevron={isCollapsible ? "true" : "false"}
           aria-label="Schema row"
           role="presentation"
         >
@@ -123,21 +123,27 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
               </span>
             )}
             {hasChanged && (
-              <span 
-                className={styles.changeBar} 
+              <span
+                className={styles.changeBar}
                 title={
-                  hasChanged.type === 'added' ? 'Added' :
-                  hasChanged.type === 'removed' ? 'Removed' :
-                  hasChanged.type === 'modified' ? 'Modified' :
-                  undefined
+                  hasChanged.type === "added"
+                    ? "Added"
+                    : hasChanged.type === "removed"
+                      ? "Removed"
+                      : hasChanged.type === "modified"
+                        ? "Modified"
+                        : undefined
                 }
               />
             )}
           </div>
-          <div className={styles.content} style={{ 
-            ['--nesting-level' as string]: nestingLevel,
-            ['--root-level' as string]: rootLevel
-          }}>
+          <div
+            className={styles.content}
+            style={{
+              ["--nesting-level" as string]: nestingLevel,
+              ["--root-level" as string]: rootLevel,
+            }}
+          >
             <div className={styles.header}>
               {isCollapsible ? <Caret isExpanded={isExpanded} /> : null}
               <button
@@ -147,7 +153,7 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
                 onMouseEnter={() => setHoveredNode(selectedChoice?.type ?? null)}
                 onFocus={() => setHoveredNode(selectedChoice?.type ?? null)}
                 onClick={isCollapsible ? () => setExpanded(!isExpanded) : undefined}
-                style={{ cursor: isCollapsible ? 'pointer' : 'default' }}
+                style={{ cursor: isCollapsible ? "pointer" : "default" }}
               >
                 {schemaNode.subpath.length > 0 && shouldShowPropertyName(schemaNode) && (
                   <span
@@ -201,7 +207,12 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
                 )}
               </button>
               {hasProperties && <div className={styles.divider} aria-hidden />}
-              <Properties required={required} deprecated={deprecated} validations={validations} schemaNode={schemaNode} />
+              <Properties
+                required={required}
+                deprecated={deprecated}
+                validations={validations}
+                schemaNode={schemaNode}
+              />
             </div>
             {typeof description === "string" &&
               (!combiner || schemaNode.parent?.fragment.description !== description) &&
@@ -216,7 +227,9 @@ export const SchemaRow: React.FunctionComponent<SchemaRowProps> = React.memo(
               </div>
             ) : null}
           </div>
-          {renderRowAddon ? <div className={styles.addon}>{renderRowAddon({ schemaNode, nestingLevel })}</div> : null}
+          {renderRowAddon ? (
+            <div className={styles.addon}>{renderRowAddon({ schemaNode, nestingLevel })}</div>
+          ) : null}
         </div>
         {isCollapsible && isExpanded ? (
           <ChildStack

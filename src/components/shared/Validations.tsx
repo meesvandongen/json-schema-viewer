@@ -128,7 +128,9 @@ export const Validations: React.FunctionComponent<IValidations> = ({
 
   const numberEntries = Object.entries(numberValidations);
   const keyValueEntries = keys(keyValueValidations).filter(
-    (key) => Object.keys(validationFormatters).includes(key) && (keyValueValidations as Dictionary<unknown>)[key] !== void 0,
+    (key) =>
+      Object.keys(validationFormatters).includes(key) &&
+      (keyValueValidations as Dictionary<unknown>)[key] !== void 0,
   );
 
   if (!numberEntries.length && !keyValueEntries.length) {
@@ -223,12 +225,11 @@ const getArrayValidations = (schemaNode: RegularNode) => {
 };
 
 export function getValidationsFromSchema(schemaNode: RegularNode) {
-  const arrayValidations = schemaNode.primaryType === "array" ? getArrayValidations(schemaNode) : null;
-  
+  const arrayValidations =
+    schemaNode.primaryType === "array" ? getArrayValidations(schemaNode) : null;
+
   return {
-    ...(schemaNode.enum !== null
-      ? { enum: schemaNode.enum }
-      : arrayValidations),
+    ...(schemaNode.enum !== null ? { enum: schemaNode.enum } : arrayValidations),
     ...("annotations" in schemaNode
       ? {
           ...(schemaNode.annotations.default !== void 0

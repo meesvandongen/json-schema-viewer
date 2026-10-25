@@ -1,5 +1,5 @@
 {
-  "include": ["src", "scripts", "tsconfig.json", ".storybook", "vitest.config.ts"],
+  "include": ["src", "scripts", "tsconfig.json", ".storybook", "vite.config.ts"],
   "compilerOptions": {
     "lib": ["dom", "es2022", "dom.iterable"],
     "target": "es2022",

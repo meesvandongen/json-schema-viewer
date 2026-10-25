@@ -10,7 +10,12 @@ import { useIsOnScreen } from "../../hooks/useIsOnScreen";
 import { isComplexArray, isDictionaryNode, visibleChildren } from "../../tree";
 import { extractVendorExtensions } from "../../utils/extractVendorExtensions";
 import { showPathCrumbsAtom } from "../PathCrumbs/state";
-import { Description, getValidationsFromSchema, Validations, Error as ErrorIndicator } from "../shared";
+import {
+  Description,
+  getValidationsFromSchema,
+  Validations,
+  Error as ErrorIndicator,
+} from "../shared";
 import { ChildStack } from "../shared/ChildStack";
 import { SchemaRow, type SchemaRowProps } from "./SchemaRow";
 import { useChoices } from "./useChoices";
@@ -51,7 +56,9 @@ export const TopLevelSchemaRow = ({
         {!skipDescription ? <Description value={schemaNode.annotations.description} /> : null}
         {/* Show top-level internal schema error if present */}
         <ErrorIndicator schemaNode={schemaNode} />
-        {hasVendorProperties && renderExtensionAddon ? renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions }) : null}
+        {hasVendorProperties && renderExtensionAddon
+          ? renderExtensionAddon({ schemaNode, nestingLevel, vendorExtensions })
+          : null}
         <ChildStack
           schemaNode={schemaNode}
           childNodes={childNodes}
@@ -110,7 +117,11 @@ export const TopLevelSchemaRow = ({
     );
   }
 
-  if (isComplexArray(schemaNode) && schemaNode.children[0] && isPureObjectNode(schemaNode.children[0])) {
+  if (
+    isComplexArray(schemaNode) &&
+    schemaNode.children[0] &&
+    isPureObjectNode(schemaNode.children[0])
+  ) {
     const validations = isRegularNode(schemaNode) ? getValidationsFromSchema(schemaNode) : {};
     return (
       <div className={topStyles.container}>

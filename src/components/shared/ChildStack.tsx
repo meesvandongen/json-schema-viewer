@@ -34,8 +34,8 @@ export const ChildStack = React.memo(
         className={`${styles.stack} ${isRootLevel ? styles.root : ""} ${className ?? ""}`}
         data-level={currentNestingLevel}
         style={{
-          ['--parent-nesting-level' as string]: currentNestingLevel,
-          ['--root-level' as string]: rootLevel
+          ["--parent-nesting-level" as string]: currentNestingLevel,
+          ["--root-level" as string]: rootLevel,
         }}
       >
         {childNodes.map((childNode: SchemaNode) => (
